@@ -1,0 +1,57 @@
+/* Justine Caylor, Shreayaa Raghuram, Yi-Shan Shir   COSC 617  Project*/
+
+/*TUTutor Main Page Style Formatting*/
+
+#mainpage{
+    text-align: center;
+    font-weight:bold;
+}
+
+#getforms{
+    text-align: center;
+    padding-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#createaccount{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #FFF821;
+}
+
+#login{
+    text-align: center;
+    width: 200px;
+    height:200px;
+    border: 5px solid #FFF821;
+}
+
+/*TUTutor Create Account Style Formatting*/
+
+#chooseprofile{
+    text-align: center;
+    font-weight:bold;
+}
+
+#tutorpupilchoice{
+    text-align: center;
+    padding-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tutoraccount{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000000;
+}
+
+#pupilaccount{
+    text-align: center;
+    width: 200px;
+    height:200px;
+    border: 5px solid #000000;
+}

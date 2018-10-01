@@ -1,0 +1,37 @@
+<!--Justine Caylor, Shreayaa Raghuram, Yi-Shan Shir   COSC 617  Project -->
+<!--TUTutor Create Tutor Page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="tututor.css">
+    <script src="tututor.js"></script>
+        <title>Create Tutor - TUTutor</title>
+            <meta charset="utf-8">  
+    </head>
+
+    <body>
+            <h1 style="text-align:center;" >Create Tutor Account</h1>
+            <form name="tutorform" method="get" action="" onsubmit="return checkPassword()">
+                    <fieldset>
+                        <div id="tutorform" class="formfield">
+                            <h2>Please complete the following fields:</h2>
+                                    First name: <input type="text" id="tutorFirst" name="tutorFirst" required><br><br>
+                                    Last name: <input type="text" id="tutorLast" name="tutorLast" required><br><br>
+                                    Email: <input type="email" name="tutorEmail" required><br><br>
+                                    Password: <input type="text" id="tutorpassword" name="tutorpassword" required><br><br>
+                                    Verify Password: <input type="text" id="verifytutorpassword" name="verifytutorpassword" required><br><br>
+                                    Major/Minor: <input type="text" id="tutorMajor" name="tutorMajor" required><br><br>
+                                    Academic Program Level: <select name="academicYear">
+                                            <option value=''>Academic Program</option>
+                                            <option value='Undergraduate'>Undergraduate</option>
+                                            <option value='Graduate'>Graduate</option>
+                                        </select> <br><br>
+                                    Courses to Tutor: <input type="text" id="tutorCourse" name="tutorCourse" required><br><br>
+                                    Tutoring Rate ($/hr; write "free" if no rate): <input type="text" id="tutorRate" name="tutorRate" required><br><br>
+                                    Available Hours: <input type="text" id="tutorHours" name="tutorHours" required><br><br>
+                                    Detail of Skills:<textarea rows="4" cols="50"></textarea>
+                        </div>
+                        </fieldset>
+                
+    </body>
+    </html>
