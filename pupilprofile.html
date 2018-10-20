@@ -1,0 +1,30 @@
+<!--Justine Caylor, Shreayaa Raghuram, Yi-Shan Shir   COSC 617  Project -->
+<!--TUTutor Create Pupil Page-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Create Pupil - Tututor
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="tututor.css">
+	<script type="text/javascript" src="tututor.js"></script>
+</head>
+<body>
+	<h1>Create Pupil Account</h1>
+	<form name="pupilform" id="pupilform" action="" onsubmit="return checkPassword(this.form)" method="post">
+		<h2>Please complete the following fields:</h2>
+		First name:<input type="text" id="pupilFirst" name="pupilFirst" required><br><br>
+		Last name: <input type="text" id="pupilLast" name="pupilLast" required><br><br>
+		Email: <input type="email" name="pupilEmail" required><br><br>
+		Password: <input type="text" id="pupilpassword" name="pupilpassword" required><br><br>
+		Verify Password: <input type="text" id="verifypupilpassword" name="verifypupilpassword" required><br><br>
+		Major/Minor: <input type="text" id="pupilMajor" name="pupilMajor" required><br><br>
+		Academic Program Level: <select name="academicYear">
+			<option value="">Academic Program</option>
+			<option value="Undergraduate">Undergraduate</option>
+			<option value="Graduate">Graduate</option>
+		</select>
+	</form>
+</body>
+</html>
