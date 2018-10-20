@@ -12,7 +12,7 @@ var port = process.env.PORT || 8080
 
 
  app.get("/", function(req,res){
-     res.render("pages/index");
+     res.render("tututor_mainpage");
  })
 
  app.listen(port, function(){
