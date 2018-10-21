@@ -1,5 +1,6 @@
  var express = require('express');
  var app =express();
+var path= require('path');
 
   //set port
  //Heroku is going to set the port or if Heroku can't, then we will be at port 3000
@@ -12,7 +13,7 @@
 
 
  app.get("/", function(req,res){
-      res.render("tututor_mainpage");
+      res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  })
 
   app.listen(port, function(){
