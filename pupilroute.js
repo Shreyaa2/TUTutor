@@ -1,7 +1,7 @@
-var express = required('express');
+var express = require('express');
 const router = express.Router();
 //gets the exported model
-const Pupil = required('../Models/pupil');
+const Pupil = require('../Models/pupil');
 
 
 router.post('/tapi/pupil', function(req, res){
