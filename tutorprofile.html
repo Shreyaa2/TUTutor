@@ -11,7 +11,7 @@
 
     <body>
             <h1 style="text-align:center;" >Create Tutor Account</h1>
-            <form name="tutorform" method="get" action="homepage.html" onsubmit="return checkPassword()">
+            <form name="tutorform" method="post" action="homepage.html" onsubmit="return checkPassword()">
                     <fieldset>
                         <div id="tutorform" class="formfield">
                             <h2>Please complete the following fields:</h2>
@@ -34,7 +34,7 @@
                                                                <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">Wednesday
                                                                <input type="checkbox" id="thursday" name="thursday" value="thursday">Thursday
                                                                <input type="checkbox" id="friday" name="friday" value="friday">Friday
-                                                               <input type="checkbox" id="saturday" name="saturday" value="saturday">Saturday
+                                                               <input type="checkbox" id="saturday" name="saturday" value="saturday">Saturday<br><br>
                                     Detail of Skills:<textarea rows="4" cols="50"></textarea>
                         </div>
                          <input type="submit" value="Create Tutor Account" class="btn">
