@@ -12,7 +12,7 @@
 
 
  app.get("/", function(req,res){
-      res.render("tututor_mainpage.html");
+      res.render("tututor_mainpage");
  })
 
   app.listen(port, function(){
