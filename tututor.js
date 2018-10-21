@@ -15,3 +15,17 @@ function checkPasswordPupil(){
 		return false;
 	}
 }
+
+function checkEmailTutor(){
+	var em1=document.forms["tutorform"]["tutoremail"].value
+	em1=em1.split('@').slice(1);
+	
+	var checkDomains=['towson.edu', 'students.towson.edu'];
+	
+	if (checkDomains.indexOf(em1) === -1){
+		alert("Please use a valid Towson University Email Address");
+		return false;
+}
+}
+	
+	
