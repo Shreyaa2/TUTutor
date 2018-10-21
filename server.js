@@ -12,7 +12,7 @@
 
 
  app.get("/", function(req,res){
-      res.render("tututor_mainpage");
+      res.render("tututor_mainpage.html");
  })
 
   app.listen(port, function(){
@@ -27,3 +27,5 @@ app.use(function (err,req, res){
     console.error(err.stack)
     res.status(500).send("Something went wrong!)
                          })
+
+ app.listen(port);
