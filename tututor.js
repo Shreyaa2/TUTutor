@@ -23,10 +23,7 @@ function checkEmailTutor(){
 	
 	var checkDomains=['towson.edu', 'students.towson.edu'];
 	
-	if (checkDomains.indexOf(em1) !== -1){
-		return true;
-	}
-	else{
+	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
 }
