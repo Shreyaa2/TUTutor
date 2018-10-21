@@ -18,11 +18,11 @@ function checkPasswordPupil(){
 
 function checkEmailTutor(){
 	var em1=document.forms["tutorform"]["tutorEmail"].value
-	em1=em1.split('@').slice(1);
+	em1=em1.split('@');
 	
 	var checkDomains=['towson.edu', 'students.towson.edu'];
 	
-	if (checkDomains.indexOf(em1) === -1){
+	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
 }
