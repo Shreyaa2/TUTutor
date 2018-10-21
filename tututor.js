@@ -17,7 +17,7 @@ function checkPasswordPupil(){
 }
 
 function checkEmailTutor(){
-	var em1=document.forms["tutorform"]["tutoremail"].value
+	var em1=document.forms["tutorform"]["tutorEmail"].value
 	em1=em1.split('@').slice(1);
 	
 	var checkDomains=['towson.edu', 'students.towson.edu'];
