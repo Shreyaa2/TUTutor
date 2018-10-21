@@ -20,12 +20,12 @@
   })
 
 app.use(function (req, res){
-    res.status(404).send("Sorry, page does not exist!)
+    res.status(404).send("Sorry, page does not exist!);
                          })
  
 app.use(function (err,req, res){
-    console.error(err.stack)
-    res.status(500).send("Something went wrong!)
+    console.error(err.stack);
+    res.status(500).send("Something went wrong!);
                          })
 
  app.listen(port);
