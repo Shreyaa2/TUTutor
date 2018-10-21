@@ -28,5 +28,29 @@ function checkEmailTutor(){
 		return false;
 }
 }
+
+//add user on click, follow up in pupilprofile
+function adduser(event){
+	event.preventDefault();
+
+	var errorCount = 0;
+  $('#adduser input').each(function(index, val) {
+    if($(this).val() === '') { errorCount++; }
+  });
+
+  // Check and make sure errorCount's still at zero
+  if(errorCount === 0) {
+
+    // If it is, compile all user info into one object
+    var newUser = {
+	  'pfname': $('#adduser fieldset input#pupilFirst').val(),
+	  'plname': $('#adduser fieldset input#pupilLast').val(),
+      'pemail': $('#adduser fieldset input#pupilEmail').val(),
+	  'ppassword': $('#adduser fieldset input#pupilpassword').val(),
+	  'pvpassword': $('#adduser fieldset input#verifypupilpassword').val(),
+      'pmajor': $('#adduser fieldset input#pupilMajor').val(),
+      'plevel': $('#adduser fieldset input#inputUserGender').val()
+    }
+}
 	
 	
