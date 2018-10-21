@@ -4,10 +4,12 @@ var mongoose = required('mongoose');
 
 var app = express();
 
-var connection = mongoose.createConnection('mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont');
-connection.Promise = global.Promise;
+var mongo = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
+mongoose.connect(mongo);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
 
-connection.on("error", console.error.bind(console, "connection error"));
+db.on("error", console.error.bind(console, "connection error"));
 connection.once("open", function(callback) {
      console.log("Connection succeeded.");
     });
