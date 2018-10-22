@@ -28,5 +28,9 @@ function checkEmailTutor(){
 		return false;
 }
 }
+
+function validate(){
+	return checkEmailTutor() && checkPasswordTutor();
+}
 	
 	
