@@ -29,8 +29,8 @@ function checkEmailTutor(){
 }
 }
 
-function validate(){
-	return checkEmailTutor() & checkPasswordTutor();
-}
+//function validate(){
+//	return checkEmailTutor() & checkPasswordTutor();
+//}
 	
 	
