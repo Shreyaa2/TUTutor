@@ -30,7 +30,7 @@ function checkEmailTutor(){
 }
 
 function validate(){
-	return checkEmailTutor() && checkPasswordTutor();
+	return (checkEmailTutor() && checkPasswordTutor());
 }
 	
 	
