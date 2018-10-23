@@ -14,6 +14,9 @@ function checkPasswordPupil(){
 		alert("Make sure you enter the same password!");
 		return false;
 	}
+	else{
+		return true;
+	}
 }
 
 function checkEmailTutor(){
@@ -26,9 +29,13 @@ function checkEmailTutor(){
 	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
+}else {
+	return true;
 }
 }
 
 function validate(){
-	return checkEmailTutor() & checkPasswordTutor();
+	var val=checkPasswordTutor();
+	checkEmailTutor(val);
+	return val;
 }
