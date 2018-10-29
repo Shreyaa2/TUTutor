@@ -12,22 +12,23 @@
 </head>
 <body>
 	<h1>Create Pupil Account</h1>
-	<form name="pupilform" id="pupilform" action="homepage.html" onsubmit="return checkPasswordPupil()" method="">
+	<form class='pupil-form' name="pupilform" id="pupilform" action="#" method="POST">
 		<fieldset id="adduser">
 		<h2>Please complete the following fields:</h2>
-		First name:<input type="text" id="pupilFirst" name="pupilFirst" required><br><br>
-		Last name: <input type="text" id="pupilLast" name="pupilLast" required><br><br>
-		Email: <input type="email" id="pupilEmail" name="pupilemail" required><br><br>
-		Password: <input type="text" id="pupilpassword" name="pupilpassword" required><br><br>
-		Verify Password: <input type="text" id="verifypupilpassword" name="verifypupilpassword" required><br><br>
-		Major/Minor: <input type="text" id="pupilMajor" name="pupilMajor" required><br><br>
-		Academic Program Level: <select name="academicYear">
+		First name:<input type="text"  id="pupilFirst" name="pupilFirst" required><br><br>
+		Last name: <input type="text"  id="pupilLast" name="pupilLast" required><br><br>
+		Email: <input type="email"  id="pupilEmail" name="pupilemail" required><br><br>
+		Password: <input type="text"  id="pupilpassword" name="pupilpassword" required><br><br>
+		Verify Password: <input type="text"  id="verifypupilpassword" name="verifypupilpassword" required><br><br>
+		Major/Minor: <input type="text"  id="pupilMajor" name="pupilMajor" required><br><br>
+		Academic Program Level: <select name="academicYear" >
 			<option value="">Academic Program</option>
 			<option value="Undergraduate">Undergraduate</option>
 			<option value="Graduate">Graduate</option>
 		</select>
- <input type="submit" value="Create Pupil Account" onclick="adduser()" class="btnAdduser">
+ <button type="submit" onclick=""> Create profile </button>
 </fieldset>
 	</form>
+	<pre id="output"></pre>
 </body>
 </html>

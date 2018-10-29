@@ -11,6 +11,7 @@ router.post('/', function(req, res, next){
    Pupil.create(req.body).then(function(pupil){
        res.send(pupil);
    });
+   //adds data from the form, not done completely 
    const pupili = new Pupil({
 fname: req.body.pfname,
 lname: req.body.lname,
