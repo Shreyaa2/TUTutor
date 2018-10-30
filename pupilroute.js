@@ -1,25 +1,21 @@
 var express = require('express');
-const router = express.Router();
 //gets the exported model
 const Pupil = require('../Models/pupil');
+//router for pupil data
+const router = express.Router();
 
 
-router.post('/tapi/pupil', function(req, res){
-    //creates an instance and adds it to the db
-//model, method
-   Pupil.create(req.body).then(function(pupil){
-       res.send(pupil);
-   });
+
+//request methods, define route endpoints using .route 
+prouter.route('/')
+//saving data to the database
+  .post((req,res) => {
+      let newpupil = new pupils(req.body);
+      newpupil.save()
+      escape.status(201).send(book)
+  });
+
+  export default prouter;
 });
 
-
-// router.post('/adduser', function(req, res) {
-//     var db = req.db;
-//     var collection = db.get('userlist');
-//     collection.insert(req.body, function(err, result){
-//       res.send(
-//         (err === null) ? { msg: '' } : { msg: err }
-//       );
-//     });
-//   });
 
