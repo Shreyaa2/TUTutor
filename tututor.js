@@ -39,3 +39,40 @@ function validate(){
 	checkEmailTutor(val);
 	return val;
 }
+
+
+
+//form input as a JSON object
+(function () {
+	function toJSONString(form) {
+		var obj = {};
+		var elements = form.querySelectorAll("input, select");
+		for (var i = 0; i < elements.length; ++i) {
+			var element = elements[i];
+			var name = element.name;
+			var value = element.value;
+ 
+			if (name) {
+				obj[name] = value;
+			}
+		}
+//displays key:value in seperate lines, converts to JSON
+		return JSON.stringify(obj, null, " ");
+	}
+
+	document.addEventListener("DOMContentLoaded", function () {
+		var form = document.getElementById("pupilform");
+		var output = document.getElementById("output");
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			//takes json obj from the func above and converts it to string 
+			var json = JSON.stringify(this);
+			//displays json format in the outer section 
+			output.innerHTML = json;
+
+
+		}, false);
+
+	});
+
+})();
