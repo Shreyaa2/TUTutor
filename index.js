@@ -1,31 +1,19 @@
 var express = require('express');
-var bodyparse = require('body-parse');
-var mongoose = require('mongoose');
 
+var mongoose = require('mongoose');
+const CONNECTION_URI= process.env.MONGODB_URI || 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont'
 var app = express();
 
-var mongo = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
-mongoose.connect(mongo);
+var port = process.env.PORT || 3000
+
+mongoose.set('debug', true);
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
 
-db.on("error", console.error.bind(console, "connection error"));
-connection.once("open", function(callback) {
-     console.log("Connection succeeded.");
-    });
-
-
-// app.get('/save/:query', cors(), function(req, res) {
-// 	var query = req.params.query;
-
-// 	var savedata = new Model({
-// 		'login': query,
-		
-// 	}).save(function(err, result) {
-// 		if (err) throw err;
-
-// 		if(result) {
-// 			res.json(result)
-// 		}
-// 	})
-// });
+mongoose.connect(CONNECTION_URI, {
+    useMongoClient: true
+})
+.then(() => {
+    console.log('Connected to mongo');
+})
+.catch(err => console.log(err)
+);
