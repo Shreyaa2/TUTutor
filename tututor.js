@@ -14,9 +14,11 @@ function checkPasswordPupil(){
 		alert("Make sure you enter the same password!");
 		return false;
 	}
-	else{
-		return true;
-	}
+//	else{
+//		return true;
+//	}
+// the function by default will submit the form without the "retun true" statement
+	
 }
 
 function checkEmailTutor(){
@@ -29,15 +31,23 @@ function checkEmailTutor(){
 	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
-}else {
-	return true;
-}
+	}
+//	else {
+//	return true;
+//}
+// same as above, the function will work by default without the "return true" statement	
 }
 
-function validate(){
-	var val=checkPasswordTutor();
-	checkEmailTutor(val);
-	return val;
+function validateTutor(){
+	var valT=checkPasswordTutor();
+	checkEmailTutor(valT);
+	return valT;
+}
+
+function validatePupil(){
+	var valP=checkPasswordPupil();
+	checkEmailPupil(valP);
+	return valP;
 }
 
 
