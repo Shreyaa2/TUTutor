@@ -38,13 +38,13 @@ function checkEmailTutor(){
 // same as above, the function will work by default without the "return true" statement	
 }
 
-function validateTutor(){
+function validateTutor(f){
 	var valT=checkPasswordTutor();
 	checkEmailTutor(valT);
 	return valT;
 }
 
-function validatePupil(){
+function validatePupil(f){
 	var valP=checkPasswordPupil();
 	checkEmailPupil(valP);
 	return valP;
