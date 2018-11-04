@@ -75,7 +75,7 @@ function validatePupil(f){
 		var output = document.getElementById("output");
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
-			//takes json obj from the func above and converts it to string 
+			//takes json obj from the toJSONString func above and converts it to string 
 			var json = toJSONString(this);
 			//displays json format in the outer section 
 			output.innerHTML = json;
