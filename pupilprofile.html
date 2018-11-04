@@ -1,7 +1,7 @@
 <!--Justine Caylor, Shreayaa Raghuram, Yi-Shan Shir   COSC 617  Project -->
 <!--TUTutor Create Pupil Page-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>
 		Create Pupil - Tututor
@@ -11,21 +11,25 @@
 	<script type="text/javascript" src="tututor.js"></script>
 </head>
 <body>
-	<h1>Create Pupil Account</h1>
-	<form name="pupilform" id="pupilform" action="homepage.html" onsubmit="return validatePupil()" method="">
-		<h2>Please complete the following fields:</h2>
-		First name:<input type="text" id="pupilFirst" name="pupilFirst" required><br><br>
-		Last name: <input type="text" id="pupilLast" name="pupilLast" required><br><br>
-		Email: <input type="email" name="pupilEmail" required><br><br>
-		Password: <input type="text" id="pupilpassword" name="pupilpassword" required><br><br>
-		Verify Password: <input type="text" id="verifypupilpassword" name="verifypupilpassword" required><br><br>
-		Major/Minor: <input type="text" id="pupilMajor" name="pupilMajor" required><br><br>
-		Academic Program Level: <select name="academicYear">
-			<option value="">Academic Program</option>
-			<option value="Undergraduate">Undergraduate</option>
-			<option value="Graduate">Graduate</option>
-		</select>
- <input type="submit" value="Create Pupil Account" class="btn">
+	<h1 style="text-align:center;">Create Pupil Account</h1>
+	<form name="pupilform" action="homepage.html" onsubmit="return validatePupil(this.form)" method="">
+		<fieldset>
+			<div id="tutorform" class="formfield">
+				<h2>Please complete the following fields:</h2>
+				First name:<input type="text" id="pupilFirst" name="pupilFirst" required><br><br>
+				Last name: <input type="text" id="pupilLast" name="pupilLast" required><br><br>
+				Email: <input type="email" name="pupilEmail" required><br><br>
+				Password: <input type="text" id="pupilpassword" name="pupilpassword" required><br><br>
+				Verify Password: <input type="text" id="verifypupilpassword" name="verifypupilpassword" required><br><br>
+				Major/Minor: <input type="text" id="pupilMajor" name="pupilMajor" required><br><br>
+				Academic Program Level: <select name="academicYear">
+				<option value="">Academic Program</option>
+				<option value="Undergraduate">Undergraduate</option>
+				<option value="Graduate">Graduate</option>
+				</select>
+	                </div>
+			<input type="submit" value="Create Pupil Account" class="btn">
+		</fieldset>
 	</form>
 	
 	<footer>
