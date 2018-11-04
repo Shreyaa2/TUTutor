@@ -12,13 +12,13 @@
 </head>
 <body>
 	<h1 style="text-align:center;">Create Pupil Account</h1>
-	<form name="pupilform" action="homepage.html" onsubmit="return validatePupil(this.form)" method="">
+	<form name="pupilform" action="homepage.html" onsubmit="return validatePupil()" method="">
 		<fieldset>
 			<div id="tutorform" class="formfield">
 				<h2>Please complete the following fields:</h2>
 				First name:<input type="text" id="pupilFirst" name="pupilFirst" required><br><br>
 				Last name: <input type="text" id="pupilLast" name="pupilLast" required><br><br>
-				Email: <input type="email" name="pupilEmail" required><br><br>
+				Email: <input type="email" id="pupilEmail" name="pupilEmail" required><br><br>
 				Password: <input type="text" id="pupilpassword" name="pupilpassword" required><br><br>
 				Verify Password: <input type="text" id="verifypupilpassword" name="verifypupilpassword" required><br><br>
 				Major/Minor: <input type="text" id="pupilMajor" name="pupilMajor" required><br><br>
