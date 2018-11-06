@@ -1,7 +1,7 @@
 // controller that processes the data for routers, list of routes with their functions 
 //taken from controllers 
 
-const pupil = require('../Models/pupil');
+const pupil = require('./pupils');
 //var async = require('async')
 
 
