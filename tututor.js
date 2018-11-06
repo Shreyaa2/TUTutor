@@ -14,6 +14,14 @@ function checkPasswordPupil(){
 		alert("Make sure you enter the same password!");
 		return false;
 	}
+<<<<<<< HEAD
+=======
+//	else{
+//		return true;
+//	}
+// the function by default will submit the form without the "retun true" statement
+	
+>>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
 }
 
 function checkEmailTutor(){
@@ -23,15 +31,35 @@ function checkEmailTutor(){
 	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
-}else {
-	return true;
+	}
+//	else {
+//	return true;
+//}
+// same as above, the function will work by default without the "return true" statement	
 }
+
+function validateTutor(f){
+	var valT=checkPasswordTutor();
+	checkEmailTutor(valT);
+	return valT;
+}
+
+<<<<<<< HEAD
+
+
+
+
+=======
+function validatePupil(f){
+	var valP=checkPasswordPupil();
+	checkEmailPupil(valP);
+	return valP;
 }
 
 
 
-
-
+//form input as a JSON object
+>>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
 (function () {
 	function toJSONString(form) {
 		var obj = {};
@@ -54,7 +82,11 @@ function checkEmailTutor(){
 		var output = document.getElementById("output");
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
+<<<<<<< HEAD
 			//takes json obj from the func above and converts it to string 
+=======
+			//takes json obj from the toJSONString func above and converts it to string 
+>>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
 			var json = toJSONString(this);
 			//displays json format in the outer section 
 			output.innerHTML = json;
@@ -65,4 +97,7 @@ function checkEmailTutor(){
 	});
 
 })();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4

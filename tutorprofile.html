@@ -11,13 +11,13 @@
 
     <body>
             <h1 style="text-align:center;" >Create Tutor Account</h1>
-            <form name="tutorform" method="" action="homepage.html" onsubmit="return validate();">
+            <form name="tutorform" action="homepage.html" onsubmit="return validateTutor()" method="">
                     <fieldset>
                         <div id="tutorform" class="formfield">
                             <h2>Please complete the following fields:</h2>
                                     First name: <input type="text" id="tutorFirst" name="tutorFirst" required><br><br>
                                     Last name: <input type="text" id="tutorLast" name="tutorLast" required><br><br>
-                                    Email: <input type="text" id="tutorEmail" name="tutorEmail" required><br><br>
+                                    Email: <input type="email" id="tutorEmail" name="tutorEmail" required><br><br>
                                     Password: <input type="text" id="tutorpassword" name="tutorpassword" required><br><br>
                                     Verify Password: <input type="text" id="verifytutorpassword" name="verifytutorpassword" required><br><br>
                                     Major/Minor: <input type="text" id="tutorMajor" name="tutorMajor" required><br><br>

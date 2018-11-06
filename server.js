@@ -29,6 +29,16 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true });
  app.use(express.static(__dirname));
  
 
+ //allows use to have static files like style sheets and js/script
+ app.use(express.static(__dirname));
+ app.use('/models/pupil', prouter);
+
+ //looks at incoming data and parses it depending on it coming from a JSON or data from a form
+ app.use(bodyparse.JSON());
+ app.use(bodyparse.urlencoded({ extended: true }));
+
+
+  //routes
 
 
   //routes
