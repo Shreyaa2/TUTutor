@@ -1,31 +1,12 @@
+//Contains all controllers 
+
 var express = require('express');
-var bodyparse = require('body-parse');
-var mongoose = require('mongoose');
+var router = express.Router();
 
-var app = express();
+//importing the controller to implement http requests
+var pupil_controller = require('./pupilroute');
 
-var mongo = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
-mongoose.connect(mongo);
-mongoose.Promise = global.Promise;
-var db = mongoose.connection;
+router.post('/book/create', pupil_controller.create_pupilpro);
 
-db.on("error", console.error.bind(console, "connection error"));
-connection.once("open", function(callback) {
-     console.log("Connection succeeded.");
-    });
+module.exports = router;
 
-
-// app.get('/save/:query', cors(), function(req, res) {
-// 	var query = req.params.query;
-
-// 	var savedata = new Model({
-// 		'login': query,
-		
-// 	}).save(function(err, result) {
-// 		if (err) throw err;
-
-// 		if(result) {
-// 			res.json(result)
-// 		}
-// 	})
-// });

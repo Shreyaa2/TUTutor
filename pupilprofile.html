@@ -9,10 +9,11 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="tututor.css">
 	<script type="text/javascript" src="tututor.js"></script>
+
 </head>
 <body>
 	<h1>Create Pupil Account</h1>
-	<form class='pupil-form' name="pupilform" id="pupilform" action="#" method="POST">
+	<form class='pupil-form' name="pupilform" id="pupilform" onsubmit="return validate()" action="#" method="POST">
 		<fieldset id="adduser">
 		<h2>Please complete the following fields:</h2>
 		First name:<input type="text"  id="pupilFirst" name="pupilFirst" required><br><br>
@@ -29,6 +30,6 @@
  <button type="submit" onclick=""> Create profile </button>
 </fieldset>
 	</form>
-	<pre id="output"></pre>
+	<pre><code id="output"></code></pre>
 </body>
 </html>
