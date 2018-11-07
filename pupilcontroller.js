@@ -1,6 +1,6 @@
 // controller that processes the data for routers, list of routes with their functions 
 //taken from controllers 
-
+const mongoose = require('mongoose');
 const pupil = require('./pupils');
 //var async = require('async')
 
