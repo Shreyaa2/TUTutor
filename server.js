@@ -8,7 +8,9 @@ var app =express();
 
 var Mongoose = require('mongoose');
 var mongo = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
-Mongoose.connect(mongo);
+Mongoose.connect(mongo, {
+    useMongoClient: true
+});
 Mongoose.Promise = global.Promise;
 var db = Mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
