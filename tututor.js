@@ -14,14 +14,11 @@ function checkPasswordPupil(){
 		alert("Make sure you enter the same password!");
 		return false;
 	}
-<<<<<<< HEAD
-=======
 //	else{
 //		return true;
 //	}
 // the function by default will submit the form without the "retun true" statement
 	
->>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
 }
 
 function checkEmailTutor(){
@@ -44,12 +41,6 @@ function validateTutor(f){
 	return valT;
 }
 
-<<<<<<< HEAD
-
-
-
-
-=======
 function validatePupil(f){
 	var valP=checkPasswordPupil();
 	checkEmailPupil(valP);
@@ -59,7 +50,6 @@ function validatePupil(f){
 
 
 //form input as a JSON object
->>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
 (function () {
 	function toJSONString(form) {
 		var obj = {};
@@ -73,7 +63,7 @@ function validatePupil(f){
 				obj[name] = value;
 			}
 		}
-//displays key:value in seperate lines, converts to JSON
+//displays key: value in seperate lines, converts to JSON
 		return JSON.stringify(obj, null, " ");
 	}
 
@@ -82,22 +72,13 @@ function validatePupil(f){
 		var output = document.getElementById("output");
 		form.addEventListener("submit", function (e) {
 			e.preventDefault();
-<<<<<<< HEAD
-			//takes json obj from the func above and converts it to string 
-=======
 			//takes json obj from the toJSONString func above and converts it to string 
->>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
 			var json = toJSONString(this);
 			//displays json format in the outer section 
 			output.innerHTML = json;
-
 
 		}, false);
 
 	});
 
 })();
-<<<<<<< HEAD
-
-=======
->>>>>>> 0a1a43c198d38eb14bd07f72f19423b2d854d8d4
