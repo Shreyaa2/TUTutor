@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema();
+//const schema = mongoose.Schema();
 
 //tutor schema, the format data is stored for each field 
-const pupilschema = new Schema ({
+var pupilschema = mongoose.Schema ({
 pfname: { type: String, required: true},
 plname: {type: String, required: true},
 pemil: { type: String, required: true},
