@@ -5,12 +5,13 @@
     "scripts": {
         "start": "node server.js"
     },
-    "engines":{
+    "engines": {
         "node": "8.12.0",
         "npm": "6.4.1"
     },
     "dependencies": {
-        "express": "4.16.4"
+        "express": "4.16.4",
+        "mongoose": "^5.3.10"
     },
     "author": "Justine Caylor"
 }
