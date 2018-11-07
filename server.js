@@ -50,7 +50,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
 
   app.listen(port, function(){
-  console.log("app running");
+  console.log(`Listening on port ${port}`);
   });
 
 
