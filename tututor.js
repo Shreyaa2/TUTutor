@@ -7,6 +7,9 @@ function checkPasswordTutor(){
 		alert("Make sure you enter the same password!");
 		return false;
 	}
+	else{
+		return true;
+	}
 }
 
 function checkPasswordPupil(){
@@ -16,11 +19,10 @@ function checkPasswordPupil(){
 		alert("Make sure you enter the same password!");
 		return false;
 	}
+	else{
+		return true;
+	}
 }
-//	else{
-//		return true;
-//	}
-// the function by default will submit the form without the "retun true" statement
 	
 
 function checkEmailTutor(){
@@ -31,8 +33,10 @@ function checkEmailTutor(){
 		alert("Please use a valid Towson University Email Address");
 		return false;
 	}
+	else{
+		return true;
+	}
 }
-
 function checkEmailPupil(){
 	var em2=document.forms["pupilform"]["pupilemail"].value
 	em2=em2.split('@').slice(1);
@@ -40,6 +44,9 @@ function checkEmailPupil(){
 	if (checkDomains.indexOf(em2) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
+	}
+	else{
+		return true;
 	}
 }
 //	else {

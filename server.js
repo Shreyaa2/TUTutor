@@ -62,7 +62,7 @@ console.log('pupil get');
 });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/pupilprofile', function (req, res){
+app.get('/pupilprofile', function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
@@ -70,15 +70,13 @@ app.post('/pupilprofile', function (req, res){
          pemail: req.body.pupilemail,
          ppassword: req.body.pupilpassword,
          pvpassword: req.body.verifypupilpassword,
-         pmajor: req.body.pupilMajor,
-         plevel: req.body.academicYear
+         pmajor: req.body.pupilMajor
         },
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
-            res.status(201);
+            res.status(200);
             console.log(pupil.pfname + 'saved to collection');
-        })
-    );
+        }));
     });
 
  mongoose.connection.close();
