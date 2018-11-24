@@ -60,7 +60,7 @@ app.use(express.static(__dirname));
 //  })
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/pupilprofile', function (req, res){
+app.post('/:pupilprofile', function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
