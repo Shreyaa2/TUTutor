@@ -1,46 +1,59 @@
 // controller that processes the data for routers, list of routes with their functions 
 //taken from controllers 
-const mongoose = require('mongoose');
+
 const pupil = require('./pupils');
 //var async = require('async')
 
-
-// check 
-router.get('/pupilprofile', function(req, res){
-    //creates an instance and adds it to the db
-//model, method
-   pupil.create(req.body).then(function(pupil){
-       res.send(pupil);
-   });
-     //adds data from the form
-});
-
-
+exports.getstatus = [ (req, res, next) => {
+    res.status(200).json({
+        message: 'handling get request'
+    });
+}];
 //exports the create command, used in the page 
 exports.create_pupilpro = [ (req, res, next) => {
+    //using the schema created to map values2
    var pupili = new pupil (
        {
         fname: req.body.pfname,
         lname: req.body.lname,
         ppassword: req.body.pass,
-        pvpassword: eq.body.vpass,
+        pvpassword: req.body.vpass,
         pemail: req.body.pemail,
         pmajor: req.body.pmajor,
         plevel: req.body.plevel
        });
-        pupili.save(function (err){
-           if (err) { return next(err); }
-    //    .then(result => {
-    //        console.log(result);
-    //    }).catch(err => console.log(err));
+       pupili
+       .save()
+      .then(result =>{
+    console.log(result);
+    res.status(201).json({
+        message: "profile created",
+       pupil: {
+        fname: result.pfname,
+        lname: result.lname,
+        ppassword: result.pass,
+        pvpassword: result.vpass,
+        pemail: result.pemail,
+        pmajor: result.pmajor,
+        plevel: result.plevel
+       },
+       request: {
+           type: "POST",
+           url:"http://localhost:3000/pupilprofile"
+       }
+    });
+  });
+}];
+       
+       
+       
+     //   pupili.save(function (err){
+          // if (err) { return next(err); }
     //    res.status(201).json({
-    //        message: 'handling post',
+    //        type: "POST",
+    //        url: "";
+    //        message: 'new pupil profile created',
     //        createPupil: pupili
-
-res.redirect("another url");
-       });
-    }
-    ];
 
 //export this router
 
