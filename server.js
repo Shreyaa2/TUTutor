@@ -3,10 +3,10 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyparse = require('body-parser');
-const morgan = require('morgan');
+//const morgan = require('morgan');
 app.use(bodyparse.json());
 app.use(bodyparse.urlencoded({extended: false}));
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
 var mongoose = require('mongoose');
 //importing controller
 //var indexr= require('./indexroutes');
@@ -32,20 +32,20 @@ mongoose.Promise = global.Promise;
  var jsonParser = bodyparse.json();
  //app.use(jsonParser.urlencoded({extended: false}));
 
- app.use((req, res, next) => {
-    const error = new Error("Not found");
-    error.status = 404;
-    next(error);
-  });
+//  app.use((req, res, next) => {
+//     const error = new Error("Not found");
+//     error.status = 404;
+//     next(error);
+//   });
   
-  app.use((error, req, res, next) => {
-    res.status(error.status || 500);
-    res.json({
-      error: {
-        message: error.message
-      }
-    });
-});
+//   app.use((error, req, res, next) => {
+//     res.status(error.status || 500);
+//     res.json({
+//       error: {
+//         message: error.message
+//       }
+//     });
+// });
 
 
 //allows use to have static files like style sheets and js/script
@@ -75,11 +75,12 @@ app.post('/pupilpro', function (req, res){
             if (err) return console.error(err);
             res.status(201);
             console.log(pupil.fname + ' saved to collection');
+            mongoose.connection.close();
         })
     );
     });
 
- //mongoose.connection.close();
+ 
   app.listen(port, function(){
   console.log(`Listening on port ${port}`);
   });
