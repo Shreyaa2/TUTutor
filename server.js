@@ -79,9 +79,8 @@ app.post('/pupilprofile', function (req, res){
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
             res.status(201);
-            console.log(pupil.pfname + 'saved to collection');
-        })
-    );
+          //  console.log(pupil.pfname + 'saved to collection');
+        }));
     });
 
  mongoose.connection.close();
