@@ -55,10 +55,11 @@ app.use(express.static(__dirname));
       res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  });
 
- app.get('/:pupilprofile', function(req, res){
+
+app.get('/pupilprofile', function (req, res){
 res.status(200);
-console.log('get for pupil');
- });
+console.log('pupil get');
+});
 
 //app.use('pupilcontroller', jsonParser,indexr);
 app.post('/:pupilprofile', function (req, res){
@@ -75,13 +76,12 @@ app.post('/:pupilprofile', function (req, res){
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
             res.status(201);
-            console.log(pupil.fname + 'saved to collection');
-            mongoose.connection.close();
+            console.log(pupil.pfname + 'saved to collection');
         })
     );
     });
 
- 
+ mongoose.connection.close();
   app.listen(port, function(){
   console.log(`Listening on port ${port}`);
   });
