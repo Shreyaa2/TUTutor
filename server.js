@@ -13,8 +13,8 @@ var mongoose = require('mongoose');
 var pupil = require('./pupils');
 
 
-process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
-mongoose.connect(process.env.MONGODB, {useNewUrlParser: true});
+process.env.MONGODB = 'mongodb://heroku_l1frxk38:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38'
+mongoose.connect(process.env.MONGODB, {useNewUrlParser: true}, {useMongoClient: true});
 
 //mongoose.connection.on('error', console.error.bind(console, 'connection error'));
 mongoose.connection.on('error', function () {
