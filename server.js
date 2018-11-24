@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 var pupil = require('./pupils');
 
 
-process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38'
+process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
 mongoose.connect(process.env.MONGODB, {useNewUrlParser: true}, {useMongoClient: true});
 
 //mongoose.connection.on('error', console.error.bind(console, 'connection error'));
@@ -55,14 +55,13 @@ app.use(express.static(__dirname));
       res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  });
 
-
 app.get('/pupilprofile', function (req, res){
 res.status(200);
 console.log('pupil get');
 });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.get('/pupilprofile', function (req, res){
+app.post('/pupilprofile', function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
@@ -74,8 +73,8 @@ app.get('/pupilprofile', function (req, res){
         },
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
-            res.status(200);
-            console.log(pupil.pfname + 'saved to collection');
+            res.status(201);
+          //  console.log(pupil.pfname + 'saved to collection');
         }));
     });
 
