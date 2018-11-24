@@ -55,12 +55,13 @@ app.use(express.static(__dirname));
       res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  });
 
+
 //  app.post("/", function(req,res){
 //      res.sendFile(path.join(__dirname+'GitHub/TUTutor/pupilpro'))
 //  })
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/:pupilprofile', function (req, res){
+app.get('/:pupilprofile', function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
