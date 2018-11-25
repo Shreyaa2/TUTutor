@@ -51,21 +51,17 @@ mongoose.Promise = global.Promise;
 //allows use to have static files like style sheets and js/script
 app.use(express.static(__dirname));
 
-var request = require('request-promise');
-
-
-
   app.get("/", function(req, res){
       res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  });
 
-app.get('/pupilprofile', function (req, res){
+app.get('./pupilprofile', function (req, res){
 res.status(200);
 console.log('pupil get');
 });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/pupilprofile', function (req, res){
+app.post('./pupilprofile', jsonParser, function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
