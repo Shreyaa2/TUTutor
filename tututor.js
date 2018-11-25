@@ -24,12 +24,40 @@ function checkEmailTutor(){
 	var em1=document.forms["tutorform"]["tutorEmail"].value
 	em1=em1.split('@').slice(1);
 	em1=em1+'';
+	
+	var checkDomains=['towson.edu', 'students.towson.edu'];
+	
 	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
 }else {
 	return true;
 }
+function checkEmailPupil(){
+	var em2=document.forms["pupilform"]["pupilemail"].value
+	em2=em2.split('@').slice(1);
+	em2=em2+'';
+	
+	var checkDomains=['towson.edu', 'students.towson.edu'];
+	
+	if (checkDomains.indexOf(em2) == -1){
+		alert("Please use a valid Towson University Email Address");
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+//	else {
+//	return true;
+//}
+// same as above, the function will work by default without the "return true" statement	
+
+
+function validateTutor(f){
+	var valT=checkPasswordTutor();
+	checkEmailTutor(valT);
+	return valT;
 }
 
 function validate(){
