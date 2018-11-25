@@ -66,6 +66,7 @@ console.log('pupil get');
 
 //app.use('pupilcontroller', jsonParser,indexr);
 app.post('/pupilprofile', function (req, res){
+    res.sendFile(path.join(__dirname+'/pupilprofile'));
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
