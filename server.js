@@ -51,6 +51,10 @@ mongoose.Promise = global.Promise;
 //allows use to have static files like style sheets and js/script
 app.use(express.static(__dirname));
 
+var request = require('request-promise');
+
+
+
   app.get("/", function(req, res){
       res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  });
