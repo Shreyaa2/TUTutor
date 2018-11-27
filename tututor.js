@@ -103,7 +103,8 @@ function submit() {
 	
 		});
 	
-	})();
+	});
+};
 // 	$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
 //        { myData: document.getElementById('adduser') }, // data to be submit
 //        function(data, status, jqXHR) {// success callback
