@@ -54,14 +54,14 @@ function checkEmailPupil(){
 // same as above, the function will work by default without the "return true" statement	
 
 
-function validateTutor(f){
+function validateTutor(){
 	var valT=checkPasswordTutor();
 	checkEmailTutor(valT);
 	return valT;
 }
 
-function validate(){
-	var val=checkPasswordTutor();
-	checkEmailTutor(val);
-	return val;
-}
+// function validate(){
+// 	var val=checkPasswordTutor();
+// 	checkEmailTutor(val);
+// 	return val;
+// }
