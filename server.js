@@ -3,17 +3,17 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyparse = require('body-parser');
-//const morgan = require('morgan');
+const morgan = require('morgan');
 app.use(bodyparse.json());
 app.use(bodyparse.urlencoded({extended: false}));
-//app.use(morgan("dev"));
+app.use(morgan("dev"));
 var mongoose = require('mongoose');
 //importing controller
 //var indexr= require('./indexroutes');
 var pupil = require('./pupils');
 
 
-process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
+process.env.MONGODB = 'mongodb://admin:cozysweater18!@dsds039707.mlab.com:39707/heroku_l1frxk38';
 mongoose.connect(process.env.MONGODB, {useNewUrlParser: true}, {useMongoClient: true});
 
 //mongoose.connection.on('error', console.error.bind(console, 'connection error'));
@@ -32,20 +32,20 @@ mongoose.Promise = global.Promise;
  var jsonParser = bodyparse.json();
  //app.use(jsonParser.urlencoded({extended: false}));
 
- app.use((req, res, next) => {
-    const error = new Error("Not found");
-    error.status = 404;
-    next(error);
-  });
+//  app.use((req, res, next) => {
+//     const error = new Error("Not found");
+//     error.status = 404;
+//     next(error);
+//   });
   
-  app.use((error, req, res, next) => {
-    res.status(error.status || 500);
-    res.json({
-      error: {
-        message: error.message
-      }
-    });
-});
+//   app.use((error, req, res, next) => {
+//     res.status(error.status || 500);
+//     res.json({
+//       error: {
+//         message: error.message
+//       }
+//     });
+// });
 
 
 //allows use to have static files like style sheets and js/script
@@ -55,18 +55,16 @@ app.use(express.static(__dirname));
       res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
  });
 
+//  app.post("/", function(req,res){
+//      res.sendFile(path.join(__dirname+'GitHub/TUTutor/pupilpro'))
+//  })
 app.get('./pupilprofile', function (req, res){
-res.status(200);
-console.log('pupil get');
-});
+    res.status(200);
+    console.log('pupil get');
+    });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-<<<<<<< HEAD
-app.post('/pupilprofile', function (req, res){
-    res.sendFile(path.join(__dirname+'/pupilprofile'));
-=======
-app.post('./pupilprofile', jsonParser, function (req, res){
->>>>>>> 6ee0dac6fbc1e9d590f98fda5df00257763264d7
+app.post('/pupilpro', function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
@@ -74,16 +72,18 @@ app.post('./pupilprofile', jsonParser, function (req, res){
          pemail: req.body.pupilemail,
          ppassword: req.body.pupilpassword,
          pvpassword: req.body.verifypupilpassword,
-         pmajor: req.body.pupilMajor
+         pmajor: req.body.pupilMajor,
+         plevel: req.body.academicYear
         },
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
             res.status(201);
-          //  console.log(pupil.pfname + 'saved to collection');
-        }));
+            console.log(pupil.fname + ' saved to collection');
+        })
+    );
     });
 
- mongoose.connection.close();
+ //mongoose.connection.close();
   app.listen(port, function(){
   console.log(`Listening on port ${port}`);
   });
