@@ -13,7 +13,7 @@ var mongoose = require('mongoose');
 var pupil = require('./pupils');
 
 
-process.env.MONGODB = 'mongodb://admin:cozysweater18!@dsds039707.mlab.com:39707/heroku_l1frxk38';
+process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
 mongoose.connect(process.env.MONGODB, {useNewUrlParser: true}, {useMongoClient: true});
 
 //mongoose.connection.on('error', console.error.bind(console, 'connection error'));
@@ -26,7 +26,7 @@ mongoose.Promise = global.Promise;
 
  //set port
  //Heroku is going to set the port or if Heroku can't, then we will be at port 3000
- var port = process.env.port || 3000;
+ var port = process.env.PORT || 3000;
 
   //looks at incoming data and parses it depending on it coming from a JSON or data from a form
  var jsonParser = bodyparse.json();
@@ -64,7 +64,7 @@ app.get('./pupilprofile', function (req, res){
     });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/pupilpro', function (req, res){
+app.post('/pupilprofile', function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
