@@ -32,20 +32,20 @@ mongoose.Promise = global.Promise;
  var jsonParser = bodyparse.json();
  //app.use(jsonParser.urlencoded({extended: false}));
 
- app.use((req, res, next) => {
-    const error = new Error("Not found");
-    error.status = 404;
-    next(error);
-  });
+//  app.use((req, res, next) => {
+//     const error = new Error("Not found");
+//     error.status = 404;
+//     next(error);
+//   });
   
-  app.use((error, req, res, next) => {
-    res.status(error.status || 500);
-    res.json({
-      error: {
-        message: error.message
-      }
-    });
-});
+//   app.use((error, req, res, next) => {
+//     res.status(error.status || 500);
+//     res.json({
+//       error: {
+//         message: error.message
+//       }
+//     });
+// });
 
 
 //allows use to have static files like style sheets and js/script
@@ -61,12 +61,9 @@ console.log('pupil get');
 });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-<<<<<<< HEAD
-app.post('/pupilprofile', function (req, res){
-    res.sendFile(path.join(__dirname+'/pupilprofile'));
-=======
-app.post('./pupilprofile', jsonParser, function (req, res){
->>>>>>> 6ee0dac6fbc1e9d590f98fda5df00257763264d7
+
+app.post('./pupilprofile', function (req, res){
+
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
@@ -83,7 +80,7 @@ app.post('./pupilprofile', jsonParser, function (req, res){
         }));
     });
 
- mongoose.connection.close();
+// mongoose.connection.close();
   app.listen(port, function(){
   console.log(`Listening on port ${port}`);
   });
