@@ -71,7 +71,6 @@ function validate(){
 
 
 (function () {
-	window.alert('looping');
 	function toJSONString(form) {
 		window.alert('in the json loop');
 		window.alert('in json');
