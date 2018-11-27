@@ -68,47 +68,49 @@ function validate(){
 }
 
 
-function submit() {
 
-// 	(function () {
-// 		function toJSONString(form) {
-// 			var obj = {};
-// 			var elements = form.querySelectorAll("input, select");
-// 			for (var i = 0; i < elements.length; ++i) {
-// 				var element = elements[i];
-// 				var name = element.name;
-// 				var value = element.value;
-	 
-// 				if (name) {
-// 					obj[name] = value;
-// 				}
-// 			}
-// 	//displays key:value in seperate lines, converts to JSON
-// 			return JSON.stringify(obj, null, " ");
-// 		}
+
+(function () {
+	window.alert('looping');
+	function toJSONString(form) {
+		window.alert('in the json loop');
+		window.alert('in json');
+		var obj = {};
+		var elements = form.querySelectorAll("input, select");
+		for (var i = 0; i < elements.length; ++i) {
+			var element = elements[i];
+			var name = element.name;
+			var value = element.value;
+ 
+			if (name) {
+				obj[name] = value;
+			}
+		}
+//displays key: value in seperate lines, converts to JSON
+		return JSON.stringify(obj, null, " ");
+	}
+
+	document.addEventListener("DOMContentLoaded", function () {
+		var form = document.getElementById("pupilform");
+		var output = document.getElementById("output");
+		form.addEventListener("submit", function (e) {
+			e.preventDefault();
+			//takes json obj from the toJSONString func above and converts it to string 
+			var json = toJSONString(this);
+			//displays json format in the outer section 
+			output.innerHTML = json;
+			return(json);
+
+		}, false);
+// 		$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
+//        { myData: json }, // data to be submit
+//        function(data, status, jqXHR) {// success callback
+// 			   // $('p').append('status: ' + status + ', data: ' + data);
+// 			   alert(status + data + 'submitted data');
+//         })
+// )}
+
+	});
+
+})();
 	
-// 		document.addEventListener("DOMContentLoaded", function () {
-// 			var form = document.getElementById("pupilform");
-// 			var output = document.getElementById("output");
-// 			form.addEventListener("submit", function (e) {
-// 				e.preventDefault();
-// 				//takes json obj from the func above and converts it to string 
-// 				var json = JSON.stringify(this);
-// 				var json = toJSONString(this);
-// 				//displays json format in the outer section 
-// 				output.innerHTML = json;
-   
-	
-// 			}, false);
-	
-// 		});
-	
-// 	});
-//};
-	$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
-       { myData: document.getElementById('adduser') }, // data to be submit
-       function(data, status, jqXHR) {// success callback
-			   // $('p').append('status: ' + status + ', data: ' + data);
-			   alert(status + data + 'submitted data');
-        })
-}
