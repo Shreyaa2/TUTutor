@@ -78,7 +78,7 @@ app.post('./pupilprofile', jsonParser, function (req, res){
         }));
     });
 
- //mongoose.connection.close();
+ mongoose.connection.close();
   app.listen(port, function(){
   console.log(`Listening on port ${port}`);
   });
