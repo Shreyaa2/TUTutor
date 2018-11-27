@@ -33,6 +33,7 @@ function checkEmailTutor(){
 }else {
 	return true;
 }
+}
 function checkEmailPupil(){
 	var em2=document.forms["pupilform"]["pupilemail"].value
 	em2=em2.split('@').slice(1);
@@ -64,4 +65,12 @@ function validate(){
 	var val=checkPasswordTutor();
 	checkEmailTutor(val);
 	return val;
+}
+
+function submit() {
+	$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
+       { myData: document.getElementById('adduser') }, // data to be submit
+       function(data, status, jqXHR) {// success callback
+                $('p').append('status: ' + status + ', data: ' + data);
+        })
 }
