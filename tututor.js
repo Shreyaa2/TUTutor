@@ -61,53 +61,68 @@ function validateTutor(f){
 	return valT;
 }
 
-function validate(){
-	var val=checkPasswordTutor();
-	checkEmailTutor(val);
-	return val;
+function validatePupil(f){
+	var valP=checkPasswordPupil();
+	checkEmailPupil(valP);
+	return valP;
 }
 
 
-function submit() {
+function checkLogin(){
+	var emlog = document.forms["login"]["loginEmail"].value
+	emlog = emlog.split('@').slice(1);
 
-	(function () {
-		function toJSONString(form) {
-			var obj = {};
-			var elements = form.querySelectorAll("input, select");
-			for (var i = 0; i < elements.length; ++i) {
-				var element = elements[i];
-				var name = element.name;
-				var value = element.value;
-	 
-				if (name) {
-					obj[name] = value;
-				}
-			}
-	//displays key:value in seperate lines, converts to JSON
-			return JSON.stringify(obj, null, " ");
-		}
+	var checkDomains = ['towson.edu', 'students.towson.edu'];
+
+	if (checkDomains.indexOf(emlog) == -1){
+		alert("Please use a valid Towson University Email Address");
+		return false;
+	} else {
+		return true;
+	}
+}
+
+
+// (function () {
+// 	function toJSONString(form) {
+// 		window.alert('in the json loop');
+// 		window.alert('in json');
+// 		var obj = {};
+// 		var elements = form.querySelectorAll("input, select");
+// 		for (var i = 0; i < elements.length; ++i) {
+// 			var element = elements[i];
+// 			var name = element.name;
+// 			var value = element.value;
+ 
+// 			if (name) {
+// 				obj[name] = value;
+// 			}
+// 		}
+// //displays key: value in seperate lines, converts to JSON
+// 		return JSON.stringify(obj, null, " ");
+// 	}
+
+// 	document.addEventListener("DOMContentLoaded", function () {
+// 		var form = document.getElementById("pupilform");
+// 		var output = document.getElementById("output");
+// 		form.addEventListener("submit", function (e) {
+// 			e.preventDefault();
+// 			//takes json obj from the toJSONString func above and converts it to string 
+// 			var json = toJSONString(this);
+// 			//displays json format in the outer section 
+// 			output.innerHTML = json;
+// 			return(json);
+
+// 		}, false);
+// // 		$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
+// //        { myData: json }, // data to be submit
+// //        function(data, status, jqXHR) {// success callback
+// // 			   // $('p').append('status: ' + status + ', data: ' + data);
+// // 			   alert(status + data + 'submitted data');
+// //         })
+// // )}
+
+// 	});
+
+// })();
 	
-		document.addEventListener("DOMContentLoaded", function () {
-			var form = document.getElementById("pupilform");
-			var output = document.getElementById("output");
-			form.addEventListener("submit", function (e) {
-				e.preventDefault();
-				//takes json obj from the func above and converts it to string 
-				var json = JSON.stringify(this);
-				var json = toJSONString(this);
-				//displays json format in the outer section 
-				output.innerHTML = json;
-   
-	
-			}, false);
-	
-		});
-	
-	})();
-// 	$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
-//        { myData: document.getElementById('adduser') }, // data to be submit
-//        function(data, status, jqXHR) {// success callback
-// 			   // $('p').append('status: ' + status + ', data: ' + data);
-// 			   alert(status + data + 'submitted data');
-//         })
-// }
