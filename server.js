@@ -58,7 +58,7 @@ app.use(express.static(__dirname));
 //  app.post("/", function(req,res){
 //      res.sendFile(path.join(__dirname+'GitHub/TUTutor/pupilpro'))
 //  })
-app.get('./pupilprofile', function (req, res){
+app.get('/pupilprofile', function (req, res){
     res.status(200);
     console.log('pupil get');
     });
