@@ -57,13 +57,14 @@ app.use(express.static(__dirname));
 //  app.post("/", function(req,res){
 //      res.sendFile(path.join(__dirname+'GitHub/TUTutor/pupilpro'))
 //  })
-app.get('/pupil', function (req, res){
+app.get('/pupilpro', function (req, res){
 
     res.status(200);
     console.log('pupil get');
     });
 
 //app.use('pupilcontroller', jsonParser,indexr);
+<<<<<<< HEAD
 // app.post('/pupil', urlencodedParser, function (req, res){
 //     if (!req.body) return res.status(400)
 //     var pupili = new pupil (
@@ -81,6 +82,25 @@ app.get('/pupil', function (req, res){
 //             res.status(201).send(pupil.fname + ' saved to collection');
 //         }));
 //     });
+=======
+app.post('/pupilpro', urlencodedParser, function (req, res){
+    if (!req.body) return res.status(400)
+    var pupili = new pupil (
+        {
+         pfname: req.body.pupilFirst,
+         plname: req.body.pupilLast,
+         pemail: req.body.pupilemail,
+         ppassword: req.body.pupilpassword,
+         pvpassword: req.body.verifypupilpassword,
+         pmajor: req.body.pupilMajor,
+         plevel: req.body.academicYear
+        },
+        pupili.save(function (err, pupil){
+            if (err) return console.error(err);
+            res.status(201).send(pupil.fname + ' saved to collection');
+        }));
+    });
+>>>>>>> 0d9dd9609291f4c8d74b4a6609d7447c5ea80731
 
 
   app.listen(port, function(){
