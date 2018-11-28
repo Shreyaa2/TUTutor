@@ -68,6 +68,19 @@ function validatePupil(f){
 }
 
 
+function checkLogin(){
+	var emlog = document.forms["login"]["loginEmail"].value
+	emlog = emlog.split('@').slice(1);
+
+	var checkDomains = ['towson.edu', 'students.towson.edu'];
+
+	if (checkDomains.indexOf(emlog) == -1){
+		alert("Please use a valid Towson University Email Address");
+		return false;
+	} else {
+		return true;
+	}
+}
 
 
 (function () {
