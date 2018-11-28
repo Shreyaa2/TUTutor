@@ -63,24 +63,24 @@ app.get('/pupilpro', function (req, res){
     });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-<<<<<<< HEAD
-// app.post('/pupil', urlencodedParser, function (req, res){
-//     if (!req.body) return res.status(400)
-//     var pupili = new pupil (
-//         {
-//          pfname: req.body.pupilFirst,
-//          plname: req.body.pupilLast,
-//          pemail: req.body.pupilemail,
-//          ppassword: req.body.pupilpassword,
-//          pvpassword: req.body.verifypupilpassword,
-//          pmajor: req.body.pupilMajor,
-//          plevel: req.body.academicYear
-//         },
-//         pupili.save(function (err, pupil){
-//             if (err) return console.error(err);
-//             res.status(201).send(pupil.fname + ' saved to collection');
-//         }));
-//     });
+
+app.post('/pupil', urlencodedParser, function (req, res){
+    if (!req.body) return res.status(400)
+    var pupili = new pupil (
+        {
+         pfname: req.body.pupilFirst,
+         plname: req.body.pupilLast,
+         pemail: req.body.pupilemail,
+         ppassword: req.body.pupilpassword,
+         pvpassword: req.body.verifypupilpassword,
+         pmajor: req.body.pupilMajor,
+         plevel: req.body.academicYear
+        },
+        pupili.save(function (err, pupil){
+            if (err) return console.error(err);
+            res.status(201).send(pupil.fname + ' saved to collection');
+        }));
+    });
 
 app.post('/pupilpro', urlencodedParser, function (req, res){
     if (!req.body) return res.status(400)
