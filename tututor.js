@@ -61,10 +61,10 @@ function validateTutor(f){
 	return valT;
 }
 
-function validate(){
-	var val=checkPasswordTutor();
-	checkEmailTutor(val);
-	return val;
+function validatePupil(f){
+	var valP=checkPasswordPupil();
+	checkEmailPupil(valP);
+	return valP;
 }
 
 
