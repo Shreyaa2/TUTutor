@@ -25,7 +25,7 @@ mongoose.Promise = global.Promise;
 
  //set port
  //Heroku is going to set the port or if Heroku can't, then we will be at port 3000
- var port = 3000;
+ var port = process.env.PORT || 3000;
 
   //looks at incoming data and parses it depending on it coming from a JSON or data from a form
  var jsonParser = bodyparse.json();
@@ -64,24 +64,23 @@ app.get('/pupil', function (req, res){
     });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/pupil', urlencodedParser, function (req, res){
-    if (!req.body) return res.status(400)
-    var pupili = new pupil (
-        {
-         pfname: req.body.pupilFirst,
-         plname: req.body.pupilLast,
-         pemail: req.body.pupilemail,
-         ppassword: req.body.pupilpassword,
-         pvpassword: req.body.verifypupilpassword,
-         pmajor: req.body.pupilMajor,
-         plevel: req.body.academicYear
-        },
-        pupili.save(function (err, pupil){
-            if (err) return console.error(err);
-            res.status(201).send(pupil.fname + ' saved to collection');
-        }));
-        mongoose.connection.close();
-    });
+// app.post('/pupil', urlencodedParser, function (req, res){
+//     if (!req.body) return res.status(400)
+//     var pupili = new pupil (
+//         {
+//          pfname: req.body.pupilFirst,
+//          plname: req.body.pupilLast,
+//          pemail: req.body.pupilemail,
+//          ppassword: req.body.pupilpassword,
+//          pvpassword: req.body.verifypupilpassword,
+//          pmajor: req.body.pupilMajor,
+//          plevel: req.body.academicYear
+//         },
+//         pupili.save(function (err, pupil){
+//             if (err) return console.error(err);
+//             res.status(201).send(pupil.fname + ' saved to collection');
+//         }));
+//     });
 
 
   app.listen(port, function(){
