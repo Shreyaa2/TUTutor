@@ -10,9 +10,8 @@ var mongoose = require('mongoose');
 //var indexr= require('./indexroutes');
 var pupil = require('./pupils');
 
-
-//process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
-process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
+process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
+//process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
 mongoose.connect(process.env.MONGODB, {useNewUrlParser: true}, {useMongoClient: true});
 
 //mongoose.connection.on('error', console.error.bind(console, 'connection error'));
@@ -82,7 +81,7 @@ app.get('/pupilpro', function (req, res){
 //             res.status(201).send(pupil.fname + ' saved to collection');
 //         }));
 //     });
-=======
+
 app.post('/pupilpro', urlencodedParser, function (req, res){
     if (!req.body) return res.status(400)
     var pupili = new pupil (
@@ -100,7 +99,7 @@ app.post('/pupilpro', urlencodedParser, function (req, res){
             res.status(201).send(pupil.fname + ' saved to collection');
         }));
     });
->>>>>>> 0d9dd9609291f4c8d74b4a6609d7447c5ea80731
+
 
 
   app.listen(port, function(){
