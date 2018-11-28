@@ -25,7 +25,7 @@ mongoose.Promise = global.Promise;
 
  //set port
  //Heroku is going to set the port or if Heroku can't, then we will be at port 3000
- var port = 3000;
+ var port = process.env.PORT || 3000;
 
   //looks at incoming data and parses it depending on it coming from a JSON or data from a form
  var jsonParser = bodyparse.json();
