@@ -57,14 +57,14 @@ app.use(express.static(__dirname));
 //  app.post("/", function(req,res){
 //      res.sendFile(path.join(__dirname+'GitHub/TUTutor/pupilpro'))
 //  })
-app.get('/pupil', function (req, res){
+app.get('/pupilpro', function (req, res){
 
     res.status(200);
     console.log('pupil get');
     });
 
 //app.use('pupilcontroller', jsonParser,indexr);
-app.post('/pupil', urlencodedParser, function (req, res){
+app.post('/pupilpro', urlencodedParser, function (req, res){
     if (!req.body) return res.status(400)
     var pupili = new pupil (
         {
@@ -80,7 +80,6 @@ app.post('/pupil', urlencodedParser, function (req, res){
             if (err) return console.error(err);
             res.status(201).send(pupil.fname + ' saved to collection');
         }));
-        mongoose.connection.close();
     });
 
 
