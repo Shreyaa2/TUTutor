@@ -39,7 +39,7 @@ app.post('/', urlencodedParser,j,function (req, res){
            res.status(201).json({
                message: 'data saved in the database'
            });
-          res.redirect('homepage.html'); 
+          res.redirect('https://towsonu-tutor.herokuapp.com/homepage.html'); 
         });    
     });
 
