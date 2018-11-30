@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 var pupilschema = mongoose.Schema ({
 pfname: { type: String, required: true},
 plname: {type: String, required: true},
-pemil: { type: String, required: true},
+pemil: { type: String},
 ppassword: { type: String, required: true}, 
 pvpassword: { type: String, required: true}, 
 pmajor: { type: String},
