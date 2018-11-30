@@ -36,10 +36,8 @@ router.post('/', urlencodedParser,j,function (req, res){
         });
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
-             res.status(201).json({
-               message: 'data saved in the database'
-           });
-          res.redirect('https://www.google.com'); 
+             res.status(201);
+          res.redirect('http://www.google.com'); 
         });    
     });
 
