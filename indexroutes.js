@@ -17,13 +17,13 @@ const pupil = require('./pupils');
 
 
 
-app.get('/',urlencodedParser,j,function (req, res){
+router.get('/',urlencodedParser,j,function (req, res){
     res.status(200).json({
         message: 'handling pupil get'
     });
     });
 
-app.post('/', urlencodedParser,j,function (req, res){
+router.post('/', urlencodedParser,j,function (req, res){
     var pupili = new pupil (
         {
          pfname: req.body.pupilFirst,
@@ -32,14 +32,14 @@ app.post('/', urlencodedParser,j,function (req, res){
          ppassword: req.body.pupilpassword,
          pvpassword: req.body.verifypupilpassword,
          pmajor: req.body.pupilMajor,
-         plevel: req.body.academicYear
+         plevel: req.body.academicYear,
         });
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
-           res.status(201).json({
+             res.status(201).json({
                message: 'data saved in the database'
            });
-          res.redirect('homepage.html'); 
+          res.redirect('https://towsonu-tutor.herokuapp.com/pupilpro'); 
         });    
     });
 
