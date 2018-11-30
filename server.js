@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 //importing controller
 var indexr= require('./indexroutes');
-
+var tutorr = require ('./tutorroute');
 
 process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
 //process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
@@ -40,7 +40,7 @@ app.use(express.static(__dirname));
  });
 
  app.use('/pupilpro', indexr);
- app.use('/tutorpro', indexr);
+ app.use('/tutorpro', tutorr);
  app.use(function (err, req, res, next) {
     console.error(err.stack)
     res.status(500).send('Something broke!')
