@@ -10,9 +10,8 @@ var mongoose = require('mongoose');
 var indexr= require('./indexroutes');
 
 
-
-//process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
-process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
+process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
+//process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
 mongoose.connect(process.env.MONGODB, {useNewUrlParser: true}, {useMongoClient: true});
 
 //mongoose.connection.on('error', console.error.bind(console, 'connection error'));

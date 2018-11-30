@@ -55,3 +55,9 @@
     height:200px;
     border: 5px solid #000000;
 }
+
+/*Homepage Styles*/
+#welcome{
+    max-width: 100%;
+    height: auto;
+}

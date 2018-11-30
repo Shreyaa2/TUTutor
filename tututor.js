@@ -71,6 +71,7 @@ function validatePupil(f){
 function checkLogin(){
 	var emlog = document.forms["login"]["loginEmail"].value
 	emlog = emlog.split('@').slice(1);
+	em1=em1+'';
 
 	var checkDomains = ['towson.edu', 'students.towson.edu'];
 
