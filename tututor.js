@@ -96,5 +96,19 @@ function submit(){
             });
     })
 });
+}
 
+
+function submitt(){
+    $(document).ready(function (){
+        const url = '/tutorpro';
+        var data = {
+          d: 'document.form',
+        }
+        $('.sub').click(function(){
+            $.post(url, data, function(data, status){
+                console.log('data submitted');
+            });
+    })
+});
 }
