@@ -39,7 +39,7 @@ router.post('/', urlencodedParser,j,function (req, res){
              res.status(201).json({
                message: 'data saved in the database'
            });
-          res.redirect('www.google.com'); 
+          res.redirect('https://www.google.com'); 
         });    
     });
 
