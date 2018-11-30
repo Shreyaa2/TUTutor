@@ -10,6 +10,7 @@ var tutuorschema = mongoose.Schema ({
     tlevel: {type: String},
     tcourse: {type: String},
     trate: {type: String},
+    tdesc: {type: String},
 });
 
 var tutor = mongoose.model('tutor', tutuorschema, 'tutorinfo');
