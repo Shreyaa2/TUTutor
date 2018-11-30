@@ -86,7 +86,7 @@ function checkLogin(){
 
 function submit(){
     $(document).ready(function (){
-        const url = 'https://towsonu-tutor.herokuapp.com/pupilprofile/pupilpro';
+        const url = 'https://towsonu-tutor.herokuapp.com/pupilpro';
         var data = {
           d: 'document.form',
 
