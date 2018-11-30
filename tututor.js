@@ -105,7 +105,7 @@ function submitt(){
         var data = {
           d: 'document.form',
         }
-        $('.sub').click(function(){
+        $('.sub2').click(function(){
             $.post(url, data, function(data, status){
                 console.log('data submitted');
             });
