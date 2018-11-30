@@ -7,7 +7,7 @@ plname: {type: String, required: true},
 pemil: { type: String, required: true},
 ppassword: { type: String, required: true}, 
 pvpassword: { type: String, required: true}, 
-pmajor: { type: String },
+pmajor: { type: String},
 plevel: {type: String},
 });
 
