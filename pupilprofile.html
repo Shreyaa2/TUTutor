@@ -10,11 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="tututor.css">
 	<script type="text/javascript" src="tututor.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
 </head>
 <body>
 	<h1>Create Pupil Account</h1>
-	<form class='pupil-form' name="pupilform" id="pupilform" onsubmit="return validatePupil()" action="/pupilpro" method="POST">
+	<form class='pupil-form' name="pupilform" id="pupilform" onsubmit="return submit(this.form)" action="/pupilpro" method="POST">
 		<fieldset id="adduser">
 		<h2>Please complete the following fields:</h2>
 		First name:<input type="text"  id="pupilFirst" name="pupilFirst" required><br><br>
@@ -28,7 +27,7 @@
 			<option value="Undergraduate">Undergraduate</option>
 			<option value="Graduate">Graduate</option>
 		</select>
- <button type="submit" id="sub" onclick="return submit(this.form)"> Create profile </button>
+ <button type="submit" id="sub" onclick="return validatePupil()"> Create profile </button>
 </fieldset>
 <pre><code id="output"> </code></pre>
 	</form>
