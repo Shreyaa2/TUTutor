@@ -83,46 +83,18 @@ function checkLogin(){
 }
 
 
-// (function () {
-// 	function toJSONString(form) {
-// 		window.alert('in the json loop');
-// 		window.alert('in json');
-// 		var obj = {};
-// 		var elements = form.querySelectorAll("input, select");
-// 		for (var i = 0; i < elements.length; ++i) {
-// 			var element = elements[i];
-// 			var name = element.name;
-// 			var value = element.value;
- 
-// 			if (name) {
-// 				obj[name] = value;
-// 			}
-// 		}
-// //displays key: value in seperate lines, converts to JSON
-// 		return JSON.stringify(obj, null, " ");
-// 	}
+function submit(){
+    $(document).ready(function (){
+        const url = 'https://localhost:3000/pupilprofile/pupilpro';
+        var data = {
+          d: 'document.form',
 
-// 	document.addEventListener("DOMContentLoaded", function () {
-// 		var form = document.getElementById("pupilform");
-// 		var output = document.getElementById("output");
-// 		form.addEventListener("submit", function (e) {
-// 			e.preventDefault();
-// 			//takes json obj from the toJSONString func above and converts it to string 
-// 			var json = toJSONString(this);
-// 			//displays json format in the outer section 
-// 			output.innerHTML = json;
-// 			return(json);
+        }
+        $('.sub').click(function(){
+            $.post(url, data, function(data, status){
+                console.log('data submitted');
+            });
+    })
+});
 
-// 		}, false);
-// // 		$.post('https://towsonu-tutor.herokuapp.com/pupilprofile',   // url
-// //        { myData: json }, // data to be submit
-// //        function(data, status, jqXHR) {// success callback
-// // 			   // $('p').append('status: ' + status + ', data: ' + data);
-// // 			   alert(status + data + 'submitted data');
-// //         })
-// // )}
-
-// 	});
-
-// })();
-	
+}
