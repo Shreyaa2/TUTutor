@@ -12,7 +12,7 @@ plevel: {type: String},
 });
 
 //login model
-var pupil = mongoose.model('pupil', pupilschema, 'pupilprofile');
+var pupil = mongoose.model('pupil', pupilschema, 'pupilinfo');
 
 //exports model tutor for use during GET or POST requests
 module.exports = pupil;
