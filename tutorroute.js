@@ -24,6 +24,7 @@ router.post('/', urlencodedParser,j,function (req, res) {
         tlevel: req.body.academicYear,
         tcourse: req.body.tutorCourse,
         trate: req.body.tutorRate,
+        tdesc: req.body.desc,
     });
     tutori.save(function (err){
         if (err) return console.error(err);
