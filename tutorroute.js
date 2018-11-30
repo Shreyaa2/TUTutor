@@ -32,4 +32,4 @@ router.post('/', urlencodedParser,j,function (req, res) {
     });
 });
 
-module.exports = router2;
+module.exports = router;
