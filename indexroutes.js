@@ -36,10 +36,8 @@ router.post('/', urlencodedParser,j,function (req, res){
         });
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
-             res.status(201).json({
-               message: 'data saved in the database'
-           });
-          res.redirect('https://towsonu-tutor.herokuapp.com/pupilpro'); 
+             res.status(200);
+          res.redirect('https://towsonu-tutor.herokuapp.com/homepage.html'); 
         });    
     });
 
