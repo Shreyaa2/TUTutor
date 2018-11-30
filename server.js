@@ -6,7 +6,7 @@ app.use(bodyparse.json());
 var mongoose = require('mongoose');
 
 
-//importing controller
+//importing routes
 var indexr= require('./indexroutes');
 var tutorr = require ('./tutorroute');
 
