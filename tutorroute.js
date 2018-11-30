@@ -17,8 +17,8 @@ router.post('/', urlencodedParser,j,function (req, res) {
     var tutori = new tutor ({
         tfname: req.body.tutorFirst,
         tlname: req.body.tutorLast,
-        temil: req.body.tutorEmail,
-        tpassword: req.body.tutorpasword, 
+        temail: req.body.tutorEmail,
+        tpassword: req.body.tutorpassword, 
         tvpassword: req.body.verifytutorpassword,
         tmajor: req.body.tutorMajor,
         tlevel: req.body.academicYear,
