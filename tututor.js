@@ -115,6 +115,10 @@ function checkLogin(){
 	}
 }
 
+function change(){
+	return (document.login.action = document.User.value);
+}
+
 function verifyUser() {
 	$(document).ready(function (){
 	var usr = $(".loginEmail").val();
