@@ -117,15 +117,32 @@ function checkLogin(){
 
 function verifyUser() {
 	$(document).ready(function (){
+		// var u;
+		// if ($('.user').val() == 'student'){
+		// 	u= '/'
+		// }
 	var usr = $(".loginEmail").val();
 	var pass = $(".loginpassword").val();
 	const url= '/login.html';
-$('.sign').click(() => {
-	$.get(url, {usr, pass}, function(response, status) {
-		if(status == 200 ){
-        window.location('homepage.html');
+$('.login').submit(() => {
+	$.ajax({
+		type: 'GET',
+		url: url,
+		data: {
+			pemail: usr,
+			ppassword: pass
+		},
+		success: function(data){
+			if(data == 'Correct') {
+				window.location('https://google.com');
+			}
+			else {
+				alert('invalid entry');
+			}
 		}
+
 	});
+	return false;
 });
 });
 }

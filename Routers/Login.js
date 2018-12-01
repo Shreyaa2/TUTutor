@@ -8,29 +8,29 @@ app.use(bodyparse.json());
 var $ = require('jquery');
 
 const pupil = require('../pupils');
-const tutor = require('../tutors');
+//const tutor = require('../tutors');
 
 router.get('/' ,urlencodedParser, j, (req, res, next) => {
-   (pupil.findOne({pemail: req.body.loginEmail}) || tutor.findOne({temail: req.body.loginpassword})
+   (pupil.findOne({pemail: req.body.loginEmail}) 
     .exec()
     .then( users => {
         if(users.length < 1) {
-           return res.status(401).json({
+            res.status(401).json({
                 message: 'Authentication failed'
             });
         }
-      pupil.findOne({ppassword: req.body.loginpassword}) || tutor.findOne({tpassword: req.body.loginpassword})( function(err, result){
+      pupil.findOne({ppassword: req.body.loginpassword}, function(err, result){
           if (err){
               return res.status(401).json({
                   messgae: 'Authentication failed password'
               });
           }
           if (result) {
-         return res.status(200).json({
+          res.status(200).json({
               message: 'Authentication successful'
           });
         }
-       return res.status(401).json({
+        res.status(401).json({
             message: 'Auth failed, last bit'
         });
       });  
