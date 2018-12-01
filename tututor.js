@@ -117,10 +117,6 @@ function checkLogin(){
 
 function verifyUser() {
 	$(document).ready(function (){
-		// var u;
-		// if ($('.user').val() == 'student'){
-		// 	u= '/'
-		// }
 	var usr = $(".loginEmail").val();
 	var pass = $(".loginpassword").val();
 	if ($('.user').val() == 'student'){
