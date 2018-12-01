@@ -26,7 +26,7 @@ router.post('/', urlencodedParser,j,function (req, res){
         {
          pfname: req.body.pupilFirst,
          plname: req.body.pupilLast,
-         pemail: req.body.pupilEmail,
+         pemail: req.body.pupilemail,
          ppassword: req.body.pupilpassword,
          pvpassword: req.body.verifypupilpassword,
          pmajor: req.body.pupilMajor,
