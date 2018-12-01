@@ -10,11 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="tututor.css">
 	<script type="text/javascript" src="tututor.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript">
-	document.getElementById('login').User.onchange = function() {
-    var newaction = this.value;
-    document.getElementById('store').action = newaction;
-};
+	<script type="text/javascript" >
+	function change(){
+		document.login.action = document.User.value;	
+	}
 	</script>
 </head>
 <body>
@@ -27,7 +26,7 @@
 			<option value="/signt">Tutor</option>
 		  </select>
 		  <button  ></button>
-		<button type="submit" onclick="" id="sign" >Sign in </button>
+		<button type="submit" onclick="change()" id="sign" >Sign in </button>
 	</form>
 	<br>
 	<p>
