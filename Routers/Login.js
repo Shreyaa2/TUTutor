@@ -10,31 +10,29 @@ var $ = require('jquery');
 const pupil = require('../pupils');
 //const tutor = require('../tutors');
 
-router.post('/' ,urlencodedParser, j, (req, res, next) => {
-   pupil.findOne({pemail: req.body.loginEmail}) 
+router.get('/' ,urlencodedParser, j, (req, res, next) => {
+   pupil.find({pemail: req.body.loginEmail}) 
     .exec()
     .then( users => {
-        if(users.length < 1) {
-            if(Error) return console.error(Error);          
+        if(users.length < 1) {          
             res.status(401).json({
                 message: 'Authentication failed'
             });
         }
-      pupil.findOne({ppassword: req.body.loginpassword}, function(err, result){
-          if (err){
-            console.error(err);
-            return res.status(401).json({
+      pupil.find({ppassword: req.body.loginpassword}, function(err, result){
+          if (err) return console.error(err);
+             res.status(401).json({
                   messgae: 'Authentication failed password'
               });
-          }
+          
           if (result) {
           res.status(200).json({
               message: 'Authentication successful'
           });
         }
-        // res.status(401).json({
-        //     message: 'Auth failed, last bit'
-        // });
+        res.status(401).json({
+            message: 'Auth failed, last bit'
+        });
       });  
     })
     .catch(err => {

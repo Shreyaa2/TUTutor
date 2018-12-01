@@ -126,14 +126,14 @@ function verifyUser() {
 	const url= '/login.html';
 $('.login').submit(() => {
 	$.ajax({
-		type: 'POST',
+		type: 'GET',
 		url: url,
 		data: {
 			pemail: usr,
 			ppassword: pass
 		},
-		success: function(data){
-			if(data == 'Correct') {
+		success: function(status){
+			if(status == 200) {
 				window.location('https://google.com');
 			}
 			else {
