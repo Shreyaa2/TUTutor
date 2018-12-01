@@ -15,7 +15,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
     .exec()
     .then( users => {
         if(users.length < 1) {
-            res.status(401).json({
+           return res.status(401).json({
                 message: 'Authentication failed'
             });
         }
@@ -26,11 +26,11 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
               });
           }
           if (result) {
-          res.status(200).json({
+         return res.status(200).json({
               message: 'Authentication successful'
           });
         }
-        res.status(401).json({
+       return res.status(401).json({
             message: 'Auth failed, last bit'
         });
       });  
