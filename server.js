@@ -7,8 +7,21 @@ var mongoose = require('mongoose');
 
 
 //importing routes
-var indexr= require('./indexroutes');
-var tutorr = require ('./tutorroute');
+var pupilroutes= require('./Routers/Pupilroutes');
+var tutorroutes = require ('./Routers/Tutorroutes');
+var login = require('./Routers/Login')
+
+
+//handling CORS errors
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Request-With, Content-Type, Authorization');
+    if(req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+        return res.status(200).json({});
+    }
+    next();
+})
 
 process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
 //process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
@@ -35,16 +48,28 @@ mongoose.Promise = global.Promise;
 //allows use to have static files like style sheets and js/script
 app.use(express.static(__dirname));
 
-  app.get("/", function(req, res){
-      res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
- });
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
+});
 
- app.use('/pupilpro', indexr);
- app.use('/tutorpro', tutorr);
- app.use(function (err, req, res, next) {
-    console.error(err.stack)
-    res.status(500).send('Something broke!')
-  })
+ app.use('/pupilpro', pupilroutes);
+ app.use('/tutorpro', tutorroutes);
+ app.use('/signup', login);
+
+ app.use(function (req, res, next) {
+    const error = new Error('Not Found');
+    error.status = 404;
+    next(error);
+    });
+
+ app.use((error, req, res, next) => {
+    res.status(err.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    });
+ });
 
  
 
