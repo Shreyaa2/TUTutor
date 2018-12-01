@@ -83,7 +83,7 @@ function checkLogin(){
 	}
 }
 
-
+//pupil
 function submit(){
     $(document).ready(function (){
         const url = '/pupilpro';
@@ -98,7 +98,7 @@ function submit(){
 });
 }
 
-
+//tutor
 function submitt(){
     $(document).ready(function (){
         const url = '/tutorpro';
@@ -110,5 +110,21 @@ function submitt(){
                 console.log('data submitted');
             });
     })
+});
+}
+
+
+function verifyUser() {
+	$(document).ready(function (){
+	var usr = $(".loginEmail").val();
+	var pass = $(".loginpassword").val();
+	const url= '/login.html';
+$('.signin').click(() => {
+	$.get(url, {pemail: usr, ppassword: pass}, function(data) {
+		if(data.exists){
+
+		}
+	});
+});
 });
 }
