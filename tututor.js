@@ -147,7 +147,7 @@ $('.login').submit(() => {
 	});
 });
 	} 
-	else {
+	if ($('.user').val() == 'tutor') {
 		$('.login').submit(() => {
 			const url= '/signin/tutor';
 			$.ajax({
