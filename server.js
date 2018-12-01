@@ -49,11 +49,7 @@ mongoose.Promise = global.Promise;
 app.use(express.static(__dirname));
 
 app.get("/", function(req, res){
-<<<<<<< HEAD
     res.sendFile(path.join(__dirname, 'tututor_mainpage.html'));
-=======
-    res.sendFile('tututor_mainpage.html');
->>>>>>> 2a9190d480050833e6bb533713c7557147b782f2
 });
 
  app.use('/pupilpro', pupilroutes);
