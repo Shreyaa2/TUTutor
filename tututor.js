@@ -121,7 +121,7 @@ function verifyUser() {
 	var usr = $(".loginEmail").val();
 	var pass = $(".loginpassword").val();
 	const url= '/login.html';
-$('.signin').click(() => {
+$('.sign').click(() => {
 	$.get(url, {pemail: usr, ppassword: pass}, function(response, status) {
 		if(status == 200 ){
         window.location('homepage.html');
