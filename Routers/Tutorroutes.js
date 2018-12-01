@@ -15,6 +15,7 @@ router.get('/', urlencodedParser, j, function( req, res, next){
 
 router.post('/', urlencodedParser,j,function (req, res, next) {
     var tutori = new tutor ({
+        user: 'Tutor',
         tfname: req.body.tutorFirst,
         tlname: req.body.tutorLast,
         temail: req.body.tutorEmail,
@@ -29,7 +30,7 @@ router.post('/', urlencodedParser,j,function (req, res, next) {
     tutori.save(function (err){
         if (err) return console.error(err);
         res.status(201);
-        res.redirect('https://towsonu-tutor.herokuapp.com/homepage.html');    
+        res.redirect('homepage.html');    
     });
 });
 

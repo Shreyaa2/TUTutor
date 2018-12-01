@@ -123,18 +123,21 @@ function verifyUser() {
 		// }
 	var usr = $(".loginEmail").val();
 	var pass = $(".loginpassword").val();
-	const url= '/login.html';
+	var u= $(".user").val();
+	if ($('.user').val() == 'student'){
 $('.login').submit(() => {
+	const url= '/signin/student';
 	$.ajax({
 		type: 'GET',
 		url: url,
 		data: {
 			pemail: usr,
-			ppassword: pass
+			ppassword: pass,
+			user: u
 		},
 		success: function(status){
 			if(status == 200) {
-				window.location('https://google.com');
+				console.log("welcome");
 			}
 			else {
 				alert('invalid entry');
@@ -142,7 +145,30 @@ $('.login').submit(() => {
 		}
 
 	});
-	return false;
 });
+	} 
+	else {
+		$('.login').submit(() => {
+			const url= '/signin/tutor';
+			$.ajax({
+				type: 'GET',
+				url: url,
+				data: {
+					temail: usr,
+					tpassword: pass,
+					user: u
+				},
+				success: function(status){
+					if(status == 200) {
+						alert('welcome');
+					}
+					else {
+						alert('invalid entry');
+					}
+				}
+		
+			});
+		});
+	}
 });
 }

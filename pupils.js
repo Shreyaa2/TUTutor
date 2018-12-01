@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 //tutor schema, the format data is stored for each field 
 var pupilschema = mongoose.Schema ({
+user: {type: String},
 pfname: { type: String, required: true},
 plname: {type: String, required: true},
 pemail: { type: String, required: true},

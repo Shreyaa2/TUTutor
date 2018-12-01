@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 var tutuorschema = mongoose.Schema ({
+    user: {type: String},
     tfname: { type: String, required: true},
     tlname: {type: String, required: true},
     temail: { type: String},

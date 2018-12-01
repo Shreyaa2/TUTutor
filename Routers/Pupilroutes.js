@@ -24,6 +24,7 @@ router.get('/',urlencodedParser,j,function (req, res){
 router.post('/', urlencodedParser,j,function (req, res){
     var pupili = new pupil (
         {
+         user: 'Student',
          pfname: req.body.pupilFirst,
          plname: req.body.pupilLast,
          pemail: req.body.pupilemail,
