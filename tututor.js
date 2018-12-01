@@ -126,7 +126,7 @@ function verifyUser() {
 	const url= '/login.html';
 $('.login').submit(() => {
 	$.ajax({
-		type: 'GET',
+		type: 'POST',
 		url: url,
 		data: {
 			pemail: usr,
