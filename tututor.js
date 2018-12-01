@@ -68,21 +68,6 @@ function validatePupil(f){
 }
 
 
-function checkLogin(){
-	var emlog = document.forms["login"]["loginEmail"].value
-	emlog = emlog.split('@').slice(1);
-	em1=em1+'';
-
-	var checkDomains = ['towson.edu', 'students.towson.edu'];
-
-	if (checkDomains.indexOf(emlog) == -1){
-		alert("Please use a valid Towson University Email Address");
-		return false;
-	} else {
-		return true;
-	}
-}
-
 //pupil
 function submit(){
     $(document).ready(function (){
@@ -115,6 +100,20 @@ function submitt(){
 });
 }
 
+function checkLogin(){
+	var emlog = document.forms["login"]["loginEmail"].value
+	emlog = emlog.split('@').slice(1);
+	var em1=em1+'';
+
+	var checkDomains = ['towson.edu', 'students.towson.edu'];
+
+	if (checkDomains.indexOf(emlog) == -1){
+		alert("Please use a valid Towson University Email Address");
+		return false;
+	} else {
+		return true;
+	}
+}
 
 function verifyUser() {
 	$(document).ready(function (){
