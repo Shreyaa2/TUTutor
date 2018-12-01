@@ -26,7 +26,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
               });
             }
           if (result) {
-          res.sendStatus(200).json({
+          res.status(200).json({
               message: 'Authentication successful'
           });
         }
