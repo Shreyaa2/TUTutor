@@ -35,7 +35,7 @@ router.post('/', urlencodedParser,j,function (req, res){
         pupili.save(function (err, pupil){
             if (err) return console.error(err);
              res.status(201);
-          res.redirect('http://www.google.com'); 
+          res.redirect('homepage.html'); 
         });    
     });
 
