@@ -32,6 +32,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
               message: 'Authentication successful'
           });
         }
+        if(Error) console.log(Error);
         res.status(401).json({
             message: 'Auth failed, last bit'
         });
