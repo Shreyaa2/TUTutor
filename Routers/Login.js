@@ -29,6 +29,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
           res.status(200).json({
               message: 'Authentication successful'
           });
+          res.redirect('https//google.com')
         }
         res.status(401).json({
             message: 'Auth failed, last bit'
