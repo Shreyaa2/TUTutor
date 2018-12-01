@@ -11,17 +11,19 @@ const pupil = require('../pupils');
 //const tutor = require('../tutors');
 
 router.get('/' ,urlencodedParser, j, (req, res, next) => {
-   (pupil.findOne({pemail: req.body.loginEmail}) 
+   pupil.findOne({pemail: req.body.loginEmail}) 
     .exec()
     .then( users => {
         if(users.length < 1) {
+            if(Error) return console.error(Error);          
             res.status(401).json({
                 message: 'Authentication failed'
             });
         }
       pupil.findOne({ppassword: req.body.loginpassword}, function(err, result){
           if (err){
-              return res.status(401).json({
+            console.error(err);
+            return res.status(401).json({
                   messgae: 'Authentication failed password'
               });
           }
@@ -39,7 +41,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
         res.status(500).json({
             error: err    
         });
-    }));
+    });
 });
 
 
