@@ -27,7 +27,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
             }
           if (result) {
           res.status(200).json({
-              message: 'Authentication successful'
+              message: 'Authentication successful '
           });
           res.redirect('homepage.html');
         }
@@ -60,7 +60,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
              }
            if (result) {
            res.status(200).json({
-               message: 'Authentication successful'
+               message: 'Authentication successful TUTOR!'
            });
            res.redirect('homepage.html');
          }
