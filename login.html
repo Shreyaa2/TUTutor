@@ -21,12 +21,11 @@
 	<form name="login" id="login" action="" onsubmit="return verifyUser()" method="GET">
 		Email:<input type="email" id="loginEmail" name="loginEmail" required><br><br>
 		Password:<input type="text" id="loginpassword" name="loginpassword" required><br><br>
-		<select id='user' name=User>
+		<select id='user' onselect="change()" name=User>
 			<option value="/signs">Student</option>
 			<option value="/signt">Tutor</option>
 		  </select>
-		  <button  ></button>
-		<button type="submit" onclick="change()" id="sign" >Sign in </button>
+		<button type="submit" id="sign" >Sign in </button>
 	</form>
 	<br>
 	<p>
