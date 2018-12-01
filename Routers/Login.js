@@ -10,7 +10,7 @@ var $ = require('jquery');
 const pupil = require('../pupils');
 //const tutor = require('../tutors');
 
-router.get('/' ,urlencodedParser, j, (req, res, next) => {
+router.post('/' ,urlencodedParser, j, (req, res, next) => {
    pupil.findOne({pemail: req.body.loginEmail}) 
     .exec()
     .then( users => {
