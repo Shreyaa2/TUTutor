@@ -44,7 +44,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
 });
 
 router.get('/' ,urlencodedParser, j, (req, res, next) => {
-    pupil.find({pemail: req.body.loginEmail}) 
+    tutor.find({temail: req.body.loginEmail}) 
      .exec()
      .then( users => {
          if(users.length < 1) {          
@@ -52,7 +52,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
                  message: 'Authentication email failed'
              });
          }
-       pupil.find({ppassword: req.body.loginpassword}, function(err, result){
+       pupil.find({tpassword: req.body.loginpassword}, function(err, result){
            if (err) {
               res.status(401).json({
                    messgae: 'Authentication failed password'
