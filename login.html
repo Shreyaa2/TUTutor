@@ -10,16 +10,23 @@
 	<link rel="stylesheet" type="text/css" href="tututor.css">
 	<script type="text/javascript" src="tututor.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	document.getElementById('login').User.onchange = function() {
+    var newaction = this.value;
+    document.getElementById('store').action = newaction;
+};
+	</script>
 </head>
 <body>
 	<h1>Sign in with Your Tututor Account</h1>
-	<form name="login" id="login" action="/signin" onsubmit="return verifyUser()" method="GET">
+	<form name="login" id="login" action="" onsubmit="return verifyUser()" method="GET">
 		Email:<input type="email" id="loginEmail" name="loginEmail" required><br><br>
 		Password:<input type="text" id="loginpassword" name="loginpassword" required><br><br>
-		<select id = 'user'>
-			<option value="student">Student</option>
-			<option value="tutor">Tutor</option>
+		<select id='user' name=User>
+			<option value="/signs">Student</option>
+			<option value="/signt">Tutor</option>
 		  </select>
+		  <button  ></button>
 		<button type="submit" onclick="" id="sign" >Sign in </button>
 	</form>
 	<br>
