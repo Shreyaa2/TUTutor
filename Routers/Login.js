@@ -26,9 +26,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
               });
             }
           if (result) {
-          res.status(200).json({
-              message: 'Authentication successful '
-          });
+          res.status(200);
           res.redirect('homepage.html');
         }
         res.status(401).json({
