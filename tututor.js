@@ -123,7 +123,6 @@ function verifyUser() {
 		// }
 	var usr = $(".loginEmail").val();
 	var pass = $(".loginpassword").val();
-	var u= $(".user").val();
 	if ($('.user').val() == 'student'){
 $('.login').submit(() => {
 	const url= '/signin/student';
@@ -132,8 +131,7 @@ $('.login').submit(() => {
 		url: url,
 		data: {
 			pemail: usr,
-			ppassword: pass,
-			user: u
+			ppassword: pass
 		},
 		success: function(status){
 			if(status == 200) {
@@ -155,8 +153,7 @@ $('.login').submit(() => {
 				url: url,
 				data: {
 					temail: usr,
-					tpassword: pass,
-					user: u
+					tpassword: pass
 				},
 				success: function(status){
 					if(status == 200) {
