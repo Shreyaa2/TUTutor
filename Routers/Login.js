@@ -16,7 +16,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
     .then( users => {
         if(users.length < 1) {          
             res.status(401).json({
-                message: 'Authentication failed'
+                message: 'Authentication email failed'
             });
         }
       pupil.find({ppassword: req.body.loginpassword}, function(err, result){
@@ -24,7 +24,6 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
              res.status(401).json({
                   messgae: 'Authentication failed password'
               });
-          
           if (result) {
           res.status(200).json({
               message: 'Authentication successful'
