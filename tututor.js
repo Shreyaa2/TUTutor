@@ -125,7 +125,7 @@ function verifyUser() {
 	var pass = $(".loginpassword").val();
 	if ($('.user').val() == 'student'){
 $('.login').submit(() => {
-	const url= '/signin/student';
+	const url= '/student';
 	$.ajax({
 		type: 'GET',
 		url: url,
@@ -147,7 +147,7 @@ $('.login').submit(() => {
 	} 
 	if ($('.user').val() == 'tutor') {
 		$('.login').submit(() => {
-			const url= '/signin/tutor';
+			const url= '/tutor';
 			$.ajax({
 				type: 'GET',
 				url: url,
