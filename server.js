@@ -55,8 +55,8 @@ app.get("/", function(req, res){
 
  app.use('/pupilpro', pupilroutes);
  app.use('/tutorpro', tutorroutes);
- app.use('/signs', login);
- app.use('/signt', tlogin);
+ app.use('/signin', login);
+
 
 //  app.use(function (req, res, next) {
 //     const error = new Error('Not Found');

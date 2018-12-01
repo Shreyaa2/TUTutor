@@ -123,9 +123,8 @@ function verifyUser() {
 	$(document).ready(function (){
 	var usr = $(".loginEmail").val();
 	var pass = $(".loginpassword").val();
-	if ($('.user').val() == 'student'){
 $('.login').submit(() => {
-	const url= '/signs';
+	const url= '/signin';
 	$.ajax({
 		type: 'GET',
 		url: url,
@@ -144,28 +143,5 @@ $('.login').submit(() => {
 
 	});
 });
-	} 
-	if ($('.user').val() == 'tutor') {
-		$('.login').submit(() => {
-			const url= '/signt';
-			$.ajax({
-				type: 'GET',
-				url: url,
-				data: {
-					temail: usr,
-					tpassword: pass
-				},
-				success: function(status){
-					if(status == 200) {
-						alert('welcome');
-					}
-					else {
-						alert('invalid entry');
-					}
-				}
-		
-			});
-		});
-	}
 });
 }
