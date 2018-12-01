@@ -107,7 +107,7 @@ function checkLogin(){
 
 	var checkDomains = ['towson.edu', 'students.towson.edu'];
 
-	if (checkDomains.indexOf(emlog) == -1){
+	if (checkDomains.indexOf(em1) == -1){
 		alert("Please use a valid Towson University Email Address");
 		return false;
 	} else {
