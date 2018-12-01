@@ -13,15 +13,15 @@ var login = require('./Routers/Login')
 
 
 //handling CORS errors
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Request-With, Content-Type, Authorization');
-    if(req.method === 'OPTIONS') {
-        res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-        return res.status(200).json({});
-    }
-    next();
-})
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Request-With, Content-Type, Authorization');
+//     if(req.method === 'OPTIONS') {
+//         res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+//         return res.status(200).json({});
+//     }
+//     next();
+// })
 
 process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds039707.mlab.com:39707/heroku_l1frxk38';
 //process.env.MONGODB = 'mongodb://admin:cozysweater18!@ds223763.mlab.com:23763/towsont';
@@ -49,27 +49,27 @@ mongoose.Promise = global.Promise;
 app.use(express.static(__dirname));
 
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname+'/tututor_mainpage.html'));
+    res.sendFile(tututor_mainpage.html);
 });
 
  app.use('/pupilpro', pupilroutes);
  app.use('/tutorpro', tutorroutes);
  app.use('/signup', login);
 
- app.use(function (req, res, next) {
-    const error = new Error('Not Found');
-    error.status = 404;
-    next(error);
-    });
+//  app.use(function (req, res, next) {
+//     const error = new Error('Not Found');
+//     error.status = 404;
+//     next(error);
+//     });
 
- app.use((error, req, res, next) => {
-    res.status(err.status || 500);
-    res.json({
-        error: {
-            message: error.message
-        }
-    });
- });
+//  app.use((error, req, res, next) => {
+//     res.status(error.status || 500);
+//     res.json({
+//         error: {
+//             message: error.message
+//         }
+//     });
+//  });
 
  
 

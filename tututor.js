@@ -86,6 +86,7 @@ function checkLogin(){
 //pupil
 function submit(){
     $(document).ready(function (){
+	console.log( "document loaded" );
         const url = '/pupilpro';
         var data = {
           d: 'document.form',
@@ -101,6 +102,7 @@ function submit(){
 //tutor
 function submitt(){
     $(document).ready(function (){
+	console.log( "document loaded" );
         const url = '/tutorpro';
         var data = {
           d: 'document.form',
