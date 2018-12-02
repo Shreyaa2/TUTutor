@@ -88,6 +88,16 @@
     border: 5px solid #FFF821;
 }
 
+#pupilloginpage{
+    text-align:center;
+    border: 5px solid #FFF821;
+}
+
+#adminloginpage{
+    text-align:center;
+    border: 5px solid #FFF821;
+}
+
 /*Homepage Styles*/
 #welcome{
     max-width: 100%;
