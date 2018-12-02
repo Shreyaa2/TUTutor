@@ -90,7 +90,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .topnav a:hover {
@@ -99,8 +99,8 @@
 }
 
 .topnav a.active {
-  background-color: #2196F3;
-  color: white;
+  background-color: #FFF821;
+  color: black;
 }
 
 /*
