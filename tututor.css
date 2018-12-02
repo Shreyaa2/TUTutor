@@ -244,3 +244,11 @@
     overflow: hidden;
 }
 
+/*CONTACT US STYLES */
+
+.contactdetails{
+    text-align:center;
+    font-weight:bold;
+    font-size: 20px;
+}
+
