@@ -111,9 +111,9 @@
 .searchbtn {
     text-align:center;
     background-color: #C6C6C6;
-    color: white;
+    color: #FFF821;
     padding: 16px;
-    font-size: 16px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
 }
