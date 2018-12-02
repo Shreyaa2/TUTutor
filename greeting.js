@@ -25,6 +25,7 @@
 //ReactDOM.render(<Greets />, domContainer);
 
 const e = React.createElement;
+var nameP = document.getElementById("pupilFirst").value;
 
 class LikeButton extends React.Component {
   constructor(props) {
@@ -34,9 +35,9 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
-        var name = document.forms["pupilform"]["pupilFirst"].value;
-        var nameS = name.toString();
-      return nameS;
+        //var name = document.forms["pupilform"]["pupilFirst"].value;
+        //var nameS = name.toString();
+      return nameP;
         //'Hello!';
         //document.forms["pupilform"]["pupilFirst"].value;
     }
