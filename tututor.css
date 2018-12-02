@@ -43,6 +43,13 @@
     border: 5px solid #FFF821;
 }
 
+.mainpagebtn2{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}
+
 /*TUTutor Create Account Style Formatting*/
 
 #chooseprofile{
