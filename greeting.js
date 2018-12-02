@@ -25,27 +25,28 @@
 //ReactDOM.render(<Greets />, domContainer);
 
 const e = React.createElement;
-var nameP = document.getElementById("pupilFirst").value;
+//var nameP = document.getElementById("pupilFirst").value;
 
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { liked: false };
+    this.state = { clicked: false };
   }
 
   render() {
-    if (this.state.liked) {
+    if (this.state.clicked) {
         //var name = document.forms["pupilform"]["pupilFirst"].value;
         //var nameS = name.toString();
-      return nameP;
+      return 'You have come to the right place!'
+        //nameP;
         //'Hello!';
         //document.forms["pupilform"]["pupilFirst"].value;
     }
 
     return e(
       'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
+      { onClick: () => this.setState({ clicked: true }) },
+      'Looking for tutors or pupils?'
     );
   }
 }
