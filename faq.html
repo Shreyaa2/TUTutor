@@ -10,11 +10,40 @@
 	<link rel="stylesheet" type="text/css" href="tututor.css">
 </head>
 <body>
-	<h1>FREQUENTLY ASKED QUESTIONS</h1>
-	<p>Text to be added</p>
 
-<footer>
-    <a href="homepage.html">Return to TUTutor Homepage</a>
-	</footer>
+<h2 style="text-align:center;">FREQUENTLY ASKED QUESTIONS</h2>
+
+<button class="faqlist">Common General Questions</button>
+<div class="panel">
+  <p>Text to be added</p>
+</div>
+
+<button class="faqlist">Common Tutor Questions</button>
+<div class="panel">
+  <p>Text to be added</p>
+</div>
+
+<button class="faqlist">Common Pupil Questions</button>
+<div class="panel">
+  <p>Text to be added</p>
+</div>
+
+<script>
+var faq = document.getElementsByClassName("faqlist");
+var i;
+
+for (i = 0; i < faq.length; i++) {
+    faq[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+
 </body>
 </html>
