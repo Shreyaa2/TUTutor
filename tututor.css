@@ -14,6 +14,7 @@
     margin-right: auto;
 }
 
+/*
 #createaccount{
     text-align: center;
     width: 200px;
@@ -32,6 +33,13 @@
     text-align: center;
     width: 200px;
     height:200px;
+    border: 5px solid #FFF821;
+} */
+
+.mainpagebtn{
+    text-align: center;
+    width: 200px;
+    height: 200px;
     border: 5px solid #FFF821;
 }
 
@@ -95,7 +103,7 @@
 }
 
 .topnav .searchbtn {
-  float: right;
+  float: center;
 }
 
 .searchbtn {
