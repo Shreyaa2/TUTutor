@@ -107,6 +107,8 @@
 }
 
 .searchbtn {
+    float:center;
+    text-align:center;
     background-color: #C6C6C6;
     color: white;
     padding: 16px;
