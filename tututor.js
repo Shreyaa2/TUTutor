@@ -124,7 +124,7 @@ function verifyUser() {
 	var usr = $(".pupilloginEmail").val();
 	var pass = $(".pupilloginpassword").val();
 $('.login').submit(() => {
-	const url= '/signin';
+	const url= '/signins';
 	$.ajax({
 		type: 'GET',
 		url: url,
