@@ -108,7 +108,6 @@
 } */
 
 .searchbtn {
-    float:center;
     text-align:center;
     background-color: #C6C6C6;
     color: white;
@@ -121,6 +120,7 @@
     background-color: #9A9797;
 }
 #searchInput {
+    text-align:center;
     border-box: box-sizing;
     background-position: 14px 12px;
     background-repeat: no-repeat;
