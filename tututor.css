@@ -83,6 +83,11 @@
     text-align:center;
 }
 
+#tutorloginpage{
+    text-align:center;
+    border: 5px solid #FFF821;
+}
+
 /*Homepage Styles*/
 #welcome{
     max-width: 100%;
