@@ -37,7 +37,8 @@ class LikeButton extends React.Component {
     if (this.state.clicked) {
         //var name = document.forms["pupilform"]["pupilFirst"].value;
         //var nameS = name.toString();
-      return 'You have come to the right place!'
+      return this.props.pname;
+        //'You have come to the right place!'
         //nameP;
         //'Hello!';
         //document.forms["pupilform"]["pupilFirst"].value;
