@@ -14,6 +14,7 @@
     margin-right: auto;
 }
 
+/*
 #createaccount{
     text-align: center;
     width: 200px;
@@ -21,10 +22,24 @@
     border: 5px solid #FFF821;
 }
 
-#login{
+#logintutor{
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #FFF821;
+}
+
+#loginpupil{
     text-align: center;
     width: 200px;
     height:200px;
+    border: 5px solid #FFF821;
+} */
+
+.mainpagebtn{
+    text-align: center;
+    width: 200px;
+    height: 200px;
     border: 5px solid #FFF821;
 }
 
@@ -60,6 +75,7 @@
 #welcome{
     max-width: 100%;
     height: auto;
+    text-align:center;
 }
 
 .topnav {
@@ -87,11 +103,13 @@
   color: white;
 }
 
+/*
 .topnav .searchbtn {
-  float: right;
-}
+  float: center;
+} */
 
 .searchbtn {
+    text-align:center;
     background-color: #C6C6C6;
     color: white;
     padding: 16px;
@@ -103,6 +121,7 @@
     background-color: #9A9797;
 }
 #searchInput {
+    text-align:center;
     border-box: box-sizing;
     background-position: 14px 12px;
     background-repeat: no-repeat;
@@ -117,6 +136,10 @@
 .searchbar {
     position: relative;
     display: inline-block;
+}
+
+.searchbar .searhbtn button {
+    float:center;
 }
 
 .dropdown-content {
