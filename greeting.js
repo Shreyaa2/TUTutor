@@ -1,4 +1,4 @@
-const e = React.createElement;
+//const e = React.createElement;
 
 class Greets extends React.Component{
     //constructor(props) {
@@ -22,4 +22,4 @@ class Greets extends React.Component{
 
 const domContainer = document.getElementById('greeting');
 //.querySelector('#greeting');
-ReactDOM.render(e(Greets), domContainer);
+ReactDOM.render(<Greets />, domContainer);
