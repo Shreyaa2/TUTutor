@@ -1,0 +1,31 @@
+<!--Justine Caylor, Shreayaa Raghuram, Yi-Shan Shir   COSC 617  Project -->
+<!--TUTutor Login Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Pupil Login - Tututor
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="tututor.css">
+	<script type="text/javascript" src="tututor.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Sign in with Your Tututor Account</h1>
+	<form name="pupillogin" id="pupillogin" action="/signin" onsubmit="return verifyUser()" method="GET">
+		Email:<input type="email" id="pupilloginEmail" name="pupilloginEmail" required><br><br>
+		Password:<input type="text" id="pupilloginpassword" name="pupilloginpassword" required><br><br>
+		<button type="submit" onclick="" id="pupilsign" >Sign in </button>
+	</form>
+	<br>
+	<p>
+		<a href="createprofile.html">Don't have an account yet?</a>
+	</p>
+	
+	<footer>
+		<a href="tututor_mainpage.html">Return to TUTutor Main Page</a>
+		<a href="contactus.html">Contact Us</a>
+	</footer>
+</body>
+</html>
