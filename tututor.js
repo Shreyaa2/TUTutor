@@ -121,8 +121,8 @@ function change(){
 
 function verifyUser() {
 	$(document).ready(function (){
-	var usr = $(".loginEmail").val();
-	var pass = $(".loginpassword").val();
+	var usr = $(".pupilloginEmail").val();
+	var pass = $(".pupilloginpassword").val();
 $('.login').submit(() => {
 	const url= '/signin';
 	$.ajax({
@@ -131,6 +131,33 @@ $('.login').submit(() => {
 		data: {
 			pemail: usr,
 			ppassword: pass
+		},
+		success: function(status){
+			if(status == 200) {
+				console.log("welcome");
+			}
+			else {
+				alert('invalid entry');
+			}
+		}
+
+	});
+});
+});
+}
+
+function verifyUsert() {
+	$(document).ready(function (){
+	var usr = $(".pupilloginEmail").val();
+	var pass = $(".pupilloginpassword").val();
+$('.login').submit(() => {
+	const url= '/signint';
+	$.ajax({
+		type: 'GET',
+		url: url,
+		data: {
+			temail: usr,
+			tpassword: pass
 		},
 		success: function(status){
 			if(status == 200) {

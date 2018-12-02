@@ -9,7 +9,7 @@ var $ = require('jquery');
 const tutor = require('../tutors');
 
 router.get('/' ,urlencodedParser, j, (req, res, next) => {
-    tutor.find({temail: req.body.loginEmail}) 
+    tutor.find({temail: req.body.tutorloginEmail}) 
      .exec()
      .then( users => {
          if(users.length < 1) {          
@@ -17,7 +17,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
                  message: 'Authentication email failed'
              });
          }
-       tutor.find({tpassword: req.body.loginpassword}, function(err, result){
+       tutor.find({tpassword: req.body.tutorloginpassword}, function(err, result){
            if (err) {
               res.status(401).json({
                    messgae: 'Authentication failed password '
