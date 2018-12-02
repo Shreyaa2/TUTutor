@@ -31,7 +31,7 @@ function display(){
            dataType: "html"
         })
         request.done(function( data ) {
-            $( ".tutors" ).load('cosc236board.html', data);
+            $( ".t" ).load('cosc236board.html li', data );
           });
           request.fail(function( jqXHR, textStatus ) {
             alert( "Request failed: " + textStatus );
