@@ -110,17 +110,21 @@
 
 #tutorloginpage{
     text-align:center;
-    border: 5px solid #FFF821;
+    width: 200px;
+    height:200px;
+
 }
 
 #pupilloginpage{
     text-align:center;
-    border: 5px solid #FFF821;
+    width: 200px;
+    height:200px;
 }
 
 #adminloginpage{
     text-align:center;
-    border: 5px solid #FFF821;
+    width: 200px;
+    height:200px;
 }
 
 /*Homepage Styles*/
