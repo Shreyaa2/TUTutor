@@ -5,6 +5,7 @@
 <html lang="en">
     <head>
     <link rel="stylesheet" type="text/css" href="tututor.css">
+    <script src="./Homepage.js"></script>
         <title>TUTutor - Home Page!</title>
             <meta charset="utf-8">  
     </head>
@@ -28,7 +29,7 @@
                      <a href="about.html">About</a>
                      <a href="contactus.html">Contact</a>
                      <a href="faq.html">FAQ</a>
-                     <a href="cosc236board.html">COSC236</a>
+                     <a href="cosc236board.html" onclick="display()">COSC236</a>
                      <a href="cosc237board.html">COSC237</a>
                      <a href="cosc600board.html">COSC600</a>
                     </div>
@@ -44,20 +45,7 @@
 function searchListing() {
     document.getElementById("searchDropList").classList.toggle("show");
 }
-function filterResults() {
-    var userInput, filter, ul, li, a, i;
-    userInput = document.getElementById("searchInput");
-    filter = userInput.value.toUpperCase();
-    div = document.getElementById("searchDropList");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
-}
+
 </script>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->

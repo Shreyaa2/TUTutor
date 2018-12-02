@@ -37,7 +37,7 @@ router.post('/', urlencodedParser,j,function (req, res, next) {
 router.get('/:tutor_id', urlencodedParser,j,function(req, res, next){
     var id = req.params.productId;
     tutor.findById(id)
-    .exec
+    .exec()
     .then (doc =>{
         console.log(doc);
         res.status(200).json(doc);

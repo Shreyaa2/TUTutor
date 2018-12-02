@@ -11,6 +11,7 @@ var pupilroutes= require('./Routers/Pupilroutes');
 var tutorroutes = require ('./Routers/Tutorroutes');
 var login = require('./Routers/Login');
 var tlogin = require('./Routers/Logintutor');
+var home = require('./Routers/Homeroutes');
 
 
 //handling CORS errors
@@ -57,6 +58,7 @@ app.get("/", function(req, res){
  app.use('/tutorpro', tutorroutes);
  app.use('/signins', login);
  app.use('/signint', tlogin);
+ app.use('/cosc236board.html', home);
 
 
 //  app.use(function (req, res, next) {
