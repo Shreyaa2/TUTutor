@@ -55,7 +55,7 @@ app.get("/", function(req, res){
 
  app.use('/pupilpro', pupilroutes);
  app.use('/tutorpro', tutorroutes);
- app.use('/signin', login);
+ app.use('/signins', login);
  app.use('/signint', tlogin);
 
 

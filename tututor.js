@@ -148,8 +148,8 @@ $('.login').submit(() => {
 
 function verifyUsert() {
 	$(document).ready(function (){
-	var usr = $(".pupilloginEmail").val();
-	var pass = $(".pupilloginpassword").val();
+	var usr = $(".tutorloginEmail").val();
+	var pass = $(".tutorloginpassword").val();
 $('.login').submit(() => {
 	const url= '/signint';
 	$.ajax({
