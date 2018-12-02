@@ -34,7 +34,10 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
-      return 'Hello!';
+        var name = document.forms["pupilform"]["pupilFirst"].value;
+        var nameS = name.toString();
+      return nameS;
+        //'Hello!';
         //document.forms["pupilform"]["pupilFirst"].value;
     }
 
