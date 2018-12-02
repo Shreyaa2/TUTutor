@@ -27,15 +27,15 @@ function display(){
            url: Url,
            data: {
                tcouse: data
-           } ,
-           dataType: "html"
-        })
-        request.done(function( data ) {
-            $( ".t" ).load('cosc236board.html li', data );
-          });
-          request.fail(function( jqXHR, textStatus ) {
-            alert( "Request failed: " + textStatus );
-          });
+           },
+           success : function(data) {
+            $('#output').html(data.responseText);
+          //  createMapListings(data.responseText);
+        },
+        error : function(e) {
+            alert("Error!")
+            console.log("ERROR: ", e);
+        }
 
 
        })

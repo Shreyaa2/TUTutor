@@ -11,16 +11,9 @@ var pupil = require('../pupils');
 var tutor = require('../tutors');
 
 router.get('/', urlencodedParser, j, function(req, res, next){
-    tutor.findOne({tcourse: req.body.searchbtn})
-    .exec()
-    .then(result => {
-        res.status(200).send(result);
+    tutor.findOne({tcourse: req.body.searchbtn}, function(err, result) {
+        if (err) return res.status(500).send(err)
+    return res.status(200).send(result);
     })
-    .catch(err => {
-        res.status(500).json({
-            error: err    
-        });
     })
-});
-
 module.exports = router;
