@@ -78,6 +78,11 @@
     border: 5px solid #000000;
 }
 
+/*Login Styles*/
+#loginpage{
+    text-align:center;
+}
+
 /*Homepage Styles*/
 #welcome{
     max-width: 100%;
