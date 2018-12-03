@@ -17,8 +17,15 @@
     <h2>Introduction to Computer Science I</h2>
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
-	<div id="output">
-		
+	<div id="o">
+<form id="output" action="/tutorpro" method="GET">
+<input > 
+<table>
+<tbody>
+
+</tbody>
+</table>
+</form>
 		<button id='button' onclick="display()" >CLICK FOR TUTOR INFO</button>
 	</div>
 <!--<script>
@@ -44,7 +51,7 @@ $(document).ready(function(){
 		url: Url,
 		type: "GET",
 		success: function(result){
-			$('#output').html(result);
+			$('#output tbody').html(result);
 		},
 		error: function(error){
 			console.log('error ${error}')

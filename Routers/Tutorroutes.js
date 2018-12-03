@@ -48,6 +48,13 @@ router.get('/:tutor_id', urlencodedParser,j,function(req, res, next){
     });
 });
 
+router.get('/', urlencodedParser, j, function(req, res, next){
+    tutor.findOne({tcourse: 'COSC236'}, 'tfname tlname temail', function(err, Tutor) {
+        if (err) return res.status(500).send(err)
+    return res.status(200).send(Tutor);
+    })
+    })
+
  //router.get('/' , urlencodedParser, j, (req, res, next) => {
 //     // can use .limit if we want to limit the output
 //     tutor.find()
