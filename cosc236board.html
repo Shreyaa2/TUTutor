@@ -18,7 +18,7 @@
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
 	<div id="o">
-<form id="output" onsubmit="return display()" action="/236board" method="POST">
+<form id="output" onsubmit="return display()" action="/236board" method="GET">
 <table>
 <tbody>
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
 	var data = 'COSC236'
  	$("button").submit(function(){	
 	$.ajax({
-		type: "POST",
+		type: "GET",
 		url: Url,
 		data: {
 			tcourse: data
