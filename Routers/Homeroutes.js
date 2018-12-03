@@ -9,7 +9,7 @@ var $ = require('jquery');
 
 var pupil = require('../pupils');
 var tutor = require('../tutors');
-
+//, 'tfname tlname temail'
 router.get('/', urlencodedParser, j, function(req, res, next){
     tutor.findOne({tcourse: 'COSC236'}, function(err, Tutor) {
         if (err) return res.status(500).send(err)
