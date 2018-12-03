@@ -66,7 +66,7 @@ function validateAdmin(){
 	var correctAd='cozysweater19!';
 
 	if (checkDomains.indexOf(emAd) == -1 || passAd!==correctAd){
-		alert("Please use correct credentials");
+		alert("Please use correct credentials! Check for matching passwords and valid TU emails.");
 		return false;
 	} else {
 		return true;
@@ -75,11 +75,11 @@ function validateAdmin(){
 
 
 
-function validateTutor(f){
-	var valT=checkPasswordTutor();
-	checkEmailTutor(valT);
-	return valT;
-}
+// function validateTutor(f){
+// 	var valT=checkPasswordTutor();
+// 	checkEmailTutor(valT);
+// 	return valT;
+// }
 
 // function validatePupil(f){
 // 	var valP=checkPasswordPupil();
@@ -97,7 +97,25 @@ function validatePupil(){
 	
 	var checkDomains=['towson.edu', 'students.towson.edu'];
 	if (checkDomains.indexOf(em2) == -1||pw_p !== vpw_p){
-		alert("Please enter correct credentials");
+		alert("Please enter correct credentials! Check for matching passwords and valid TU emails.");
+		return false;
+	}
+	else{
+		return true;
+	}
+}
+
+function validateTutor(){
+	var pw_t = document.forms["tutorform"]["tutorpassword"].value
+	var vpw_t = document.forms["tutorform"]["verifytutorpassword"].value
+	
+	var em1=document.forms["tutorform"]["tutorEmail"].value
+	em1=em1.split('@').slice(1);
+	em1=em1+'';
+	
+	var checkDomains=['towson.edu', 'students.towson.edu'];
+	if (checkDomains.indexOf(em1) == -1||pw_t !== vpw_t){
+		alert("Please enter correct credentials! Check for matching passwords and valid TU emails.");
 		return false;
 	}
 	else{
