@@ -49,9 +49,9 @@ $(document).ready(function(){
 	$.ajax({
 		type: "POST",
 		url: Url,
-		data: {
-			tcourse: data
-		},
+		// data: {
+		// 	tcourse: data
+		// },
 		success: function(result){
 			$('#output tbody').html(result);
 		},
