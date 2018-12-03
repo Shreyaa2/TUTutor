@@ -6,4 +6,4 @@ var adminschema = mongoose.Schema ({
 });
 
 var admin = mongoose.model('admin', adminschema, 'admins');
-module.exports = tutor;
+module.exports = admin;
