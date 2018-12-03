@@ -52,8 +52,8 @@ $(document).ready(function(){
 		data: {
 			tcourse: data
 		},
-		success: function(result){
-			$('#output tbody').html(result);
+		success: function(data){
+			$('#output tbody').html(data);
 		},
 		error: function(error){
 			console.log('error ${error}')
