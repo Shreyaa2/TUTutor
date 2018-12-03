@@ -17,8 +17,9 @@
     <h2>Introduction to Computer Science I</h2>
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
-	<div id="gettutorinfo">
-		<button>CLICK FOR TUTOR INFO</button>
+	<div id="output">
+		
+		<button id='button' onclick="display()" >CLICK FOR TUTOR INFO</button>
 	</div>
 <!--<script>
 //$(document).ready(function(){
@@ -30,23 +31,28 @@
 // });
 </script> -->
 
+
+
 <script>
+function display () {
 $(document).ready(function(){
 	const Url='/tutorpro';
+	var data = 'COSC236'
  	$("button").click(function(){	
-	const data={tcourse:"COSC236"};
+	const data={tcourse: data};
 	$.ajax({
 		url: Url,
 		type: "GET",
 		success: function(result){
-			document.write(result)
+			$('#output').html(result);
 		},
 		error: function(error){
 			console.log('error ${error}')
 	}
-	       })
-	})
+	       });
+	});
 })
+}
 	
 	
 	</script>
