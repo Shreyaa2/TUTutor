@@ -34,7 +34,7 @@ router.post('/', urlencodedParser,j,function (req, res, next) {
     });
 });
 
-router.get('/:tutor_id', urlencodedParser,j,function(req, res, next){
+router.post('/:tutor_id', urlencodedParser,j,function(req, res, next){
     var id = req.params.productId;
     tutor.findById(id)
     .exec()
