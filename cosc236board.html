@@ -17,7 +17,8 @@
     <h2>Introduction to Computer Science I</h2>
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
-	<div id="tutors">
+	<div id="gettutorinfo">
+		<button>CLICK FOR TUTOR INFO</button>
 	</div>
 <!--<script>
 //$(document).ready(function(){
@@ -29,8 +30,27 @@
 // });
 </script> -->
 
-	// use to post the names of those tutors 
-<!--	<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p> -->
+<script>
+$(document).ready(function(){
+	const Url='https://towsonu-tutor.herokuapp.com/tutorpro';
+ 	$("button").click(function(){	
+	const data={tcourse:"COSC236"};
+	$.ajax({
+		url: Url,
+		type: "GET",
+		success: function(result){
+			console.log(result)
+		},
+		error: functon(error){
+			console.log('error ${error}')
+	}
+	       })
+	})
+})
+	
+	
+	</script>
+	<!--	<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p> -->
 
 <footer>
     <a href="homepage.html">Return to TUTutor Homepage</a>
