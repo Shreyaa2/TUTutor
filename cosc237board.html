@@ -15,52 +15,45 @@
     <h2>Introduction to Computer Science II</h2>
 	<p>Tutor and Pupil posts to be added</p>
 	
-<!-- 	<div id="o">
-<form id="output" onsubmit="return display()" action="/237board" method="GET">
+<div id="o">
+<form id="output" onsubmit="return display()" action="/board/237" method="POST">
 <table >
 <tbody>
 
 </tbody>
 </table>
 <button type="submit" id='button' >CLICK FOR TUTOR INFO</button>
-</form> -->
+</form> 
 		
 	</div>
-<!--<script>
-//$(document).ready(function(){
-//     $("button").click(function(){
-//         $.get("/tutorpro", function(data){
-//             document.write("Tutor: " + tfname + tlname+ "\nEmail: " + temail);
-//         });
-//     });
-// });
-</script> -->
 
 
 
-<!-- <script>
-function display () {
-$(document).ready(function(){
-	const Url='/237board';
-	var data = 'COSC237'
- 	$("button").submit(function(){	
-	$.ajax({
-		type: "GET",
-		url: Url,
-		data: {
-			tcourse: data
-		},
-		dataType: JSON,
-		success: function(data){
-			$('.output tbody').html(data).show();
-		},
-		error: function(error){
-			console.log('error ${error}')
-	}
-	       });
-	});
-})
-}
+<script>
+		function display () {
+			
+		$(document).ready(function(){
+			const Url='/board/237';
+			var data = 'COSC237'
+			 $("button").submit(function(){	
+				$('.output').dataTable( {
+					  serverSide: true,
+					ajax: {
+						url: Url,
+						type: "POST",
+					}, 
+					columns: [
+					{ "data": "tfname" },
+					{ "data": "tlname" },
+					{ "data": "temail" }
+					]
+						});
+							});
+						})
+					}
+			
+			
+			</script>
 	
 	
 	</script> -->

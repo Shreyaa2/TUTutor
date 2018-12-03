@@ -60,7 +60,7 @@ app.get("/", function(req, res){
  app.use('/signins', login);
  app.use('/signint', tlogin);
  app.use('/signina', alogin);
- app.use('/236board', board1);
+ app.use('/board', board1);
 //app.use('/237board', board2);
 //app.use('/600board',board3);
 

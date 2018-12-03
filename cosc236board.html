@@ -18,7 +18,7 @@
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
 	<div id="o">
-<form  onsubmit="return display()" action="/236board/236" method="POST">
+<form  onsubmit="return display()" action="/board/236" method="POST">
 <table id="output" >
 <tbody>
 
@@ -35,7 +35,7 @@
 function display () {
 	
 $(document).ready(function(){
-	const Url='/236board/236';
+	const Url='/board/236';
 	var data = 'COSC236'
  	$("button").submit(function(){	
 		$('.output').dataTable( {
