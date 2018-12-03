@@ -11,7 +11,7 @@ var pupil = require('../pupils');
 var tutor = require('../tutors');
 //
 router.post('/', urlencodedParser, j, function(req, res, next){
-    tutor.findOne({tcourse: 'COSC236'},'tfname tlname temail', function(err, Tutor) {
+    tutor.findOne({tcourse: 'COSC236'}, function(err, Tutor) {
         if (err) return res.status(500).send(err)
       return res.status(200).send(Tutor);
     }). exec();
