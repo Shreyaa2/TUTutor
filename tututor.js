@@ -81,10 +81,28 @@ function validateTutor(f){
 	return valT;
 }
 
-function validatePupil(f){
-	var valP=checkPasswordPupil();
-	checkEmailPupil(valP);
-	return valP;
+// function validatePupil(f){
+// 	var valP=checkPasswordPupil();
+// 	checkEmailPupil(valP);
+// 	return valP;
+// }
+
+function validatePupil(){
+	var pw_p = document.forms["pupilform"]["pupilpassword"].value
+	var vpw_p = document.forms["pupilform"]["verifypupilpassword"].value
+	
+	var em2=document.forms["pupilform"]["pupilemail"].value
+	em2=em2.split('@').slice(1);
+	em2=em2+'';
+	
+	var checkDomains=['towson.edu', 'students.towson.edu'];
+	if (checkDomains.indexOf(em2) == -1||pw_p !== vpw_p){
+		alert("Please enter correct credentials");
+		return false;
+	}
+	else{
+		return true;
+	}
 }
 
 
