@@ -59,7 +59,8 @@ app.get("/", function(req, res){
  app.use('/signins', login);
  app.use('/signint', tlogin);
  app.use('/236board', board1);
-
+//app.use('/237board', board2);
+//app.use('/600board',board3);
 
 //  app.use(function (req, res, next) {
 //     const error = new Error('Not Found');
