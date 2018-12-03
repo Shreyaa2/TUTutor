@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="tututor.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="tututor.js"></script>
+	<script type="text/javascript" src="logins.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
 	<h1>Sign in with Your TUTutor Account</h1>
 	<h3 style="color:red;">ADMIN</h3>
 	<!--<form name="adminLogin" id="adminLogin" action="homepage.html" onsubmit="return verifyUsera()" method="">-->
-		<form name="adminLogin" id="adminLogin" action="homepage.html" onsubmit="return validateAdmin()" method="">
+		<form name="adminLogin" id="adminLogin" action="/signina" onsubmit="return validateAdmin()" method="GET">
 		<fieldset>
 		Email:<input type="email" id="adminLoginEmail" name="adminLoginEmail" required><br><br>
 		Password:<input type="text" id="adminLoginPassword" name="adminLoginPassword" required><br><br>

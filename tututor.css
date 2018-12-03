@@ -235,7 +235,7 @@
     background-color: #FFF821;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 20px;
     width: 50%;
     border: 2px solid black;
     text-align: left;
@@ -256,6 +256,7 @@
     overflow: hidden;
 }
 
+
 /*CONTACT US STYLES */
 
 .contactdetails{
@@ -266,6 +267,6 @@
 
 #banner {
     width: 1800px;
-    length: 70%
+    length: 70%;
 }
 	

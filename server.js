@@ -11,6 +11,7 @@ var pupilroutes= require('./Routers/Pupilroutes');
 var tutorroutes = require ('./Routers/Tutorroutes');
 var login = require('./Routers/Login');
 var tlogin = require('./Routers/Logintutor');
+var alogin = require('./Routers/adminlogin');
 var board1 = require('./Routers/Homeroutes');
 
 
@@ -58,6 +59,7 @@ app.get("/", function(req, res){
  app.use('/tutorpro', tutorroutes);
  app.use('/signins', login);
  app.use('/signint', tlogin);
+ app.use('/signina', alogin);
  app.use('/236board', board1);
 //app.use('/237board', board2);
 //app.use('/600board',board3);
