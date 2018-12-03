@@ -18,7 +18,7 @@
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
 	<div id="o">
-<form id="output" action="/tutorpro" method="GET">
+<form id="output" action="/tutorpro" method="POST">
 <input > 
 <table>
 <tbody>
@@ -46,10 +46,12 @@ $(document).ready(function(){
 	const Url='/tutorpro';
 	var data = 'COSC236'
  	$("button").click(function(){	
-	const data={tcourse: data};
 	$.ajax({
 		url: Url,
-		type: "GET",
+		type: "POST",
+		data: {
+			tcourse: data
+		},
 		success: function(result){
 			$('#output tbody').html(result);
 		},
