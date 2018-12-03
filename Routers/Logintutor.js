@@ -14,7 +14,7 @@ router.get('/' ,urlencodedParser, j, (req, res, next) => {
      .then( users => {
          if(users.length < 1) {          
              res.status(401).json({
-                 message: 'Authentication email failed'
+                 message: 'Authentication email failed tutor'
              });
          }
        tutor.find({tpassword: req.body.tutorloginpassword}, function(err, result){
