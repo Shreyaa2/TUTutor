@@ -23,10 +23,10 @@ function display(){
        var data = cosc236;
     $('.searchInput').click(() =>{
        $.ajax({
-           type: 'POST',
+           type: 'GET',
            url: Url,
            data: {
-               tcouse: data
+               tcourse: data
            },
            success : function(data) {
             $('#output').html(data.responseText);
