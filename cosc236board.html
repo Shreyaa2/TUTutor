@@ -54,7 +54,7 @@ $(document).ready(function(){
 		},
 		dataType: JSON,
 		success: function(data){
-			$('.output tbody').html(data);
+			$('.output tbody').append(data);
 		},
 		error: function(error){
 			console.log('error ${error}')
