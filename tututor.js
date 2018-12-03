@@ -54,6 +54,24 @@ function checkEmailPupil(){
 //}
 // same as above, the function will work by default without the "return true" statement	
 
+function validateAdmin(){
+	var emAd = document.forms["adminLogin"]["adminLoginEmail"].value
+	var emAd=emAd+'';
+
+	var checkDomains = ['jcaylo1@students.towson.edu', 'sraghu1@students.towson.edu', 'yshir1@students.towson.edu' ];
+	
+	var passAd=document.forms["adminLogin"]["adminLoginPassword"].value
+	var passAd=passAd+'';
+	
+	var correctAd='cozysweater19!';
+
+	if (checkDomains.indexOf(emAd) == -1 || passAd!==correctAd){
+		alert("Please use correct credentials");
+		return false;
+	} else {
+		return true;
+	}
+}
 
 
 
