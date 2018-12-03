@@ -14,6 +14,56 @@
 	<h1>COSC600 Message Board</h1>
     <h2>Advanced Data Structures and Algorithms</h2>
 	<p>Tutor and Pupil posts to be added</p>
+	
+<!-- 	<div id="o">
+<form id="output" onsubmit="return display()" action="/600board" method="GET">
+<table >
+<tbody>
+
+</tbody>
+</table>
+<button type="submit" id='button' >CLICK FOR TUTOR INFO</button>
+</form> -->
+		
+<!-- 	</div> -->
+<!--<script>
+//$(document).ready(function(){
+//     $("button").click(function(){
+//         $.get("/tutorpro", function(data){
+//             document.write("Tutor: " + tfname + tlname+ "\nEmail: " + temail);
+//         });
+//     });
+// });
+</script> -->
+
+
+
+<!-- <script>
+function display () {
+$(document).ready(function(){
+	const Url='/600board';
+	var data = 'COSC600'
+ 	$("button").submit(function(){	
+	$.ajax({
+		type: "GET",
+		url: Url,
+		data: {
+			tcourse: data
+		},
+		dataType: JSON,
+		success: function(data){
+			$('.output tbody').html(data).show();
+		},
+		error: function(error){
+			console.log('error ${error}')
+	}
+	       });
+	});
+})
+} -->
+	
+	
+<!-- 	</script> -->
 
 <footer>
     <a href="homepage.html">Return to TUTutor Homepage</a>
