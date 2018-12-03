@@ -242,6 +242,7 @@ fieldset{
     width: 50%;
     border: 2px solid black;
     text-align: center;
+    vertical-align:center;
     outline: none;
     font-size: 18px;
     font-weight: bold;
@@ -253,7 +254,8 @@ fieldset{
 }
 
 .panel {
-    padding: 0 18px;
+    display:none;
+    padding: 0 20px;
     background-color: white;
     overflow: hidden;
 }
