@@ -17,14 +17,14 @@ router.post('/236', urlencodedParser, j, function(req, res, next){
     });
 
     router.post('/600', urlencodedParser, j, function(req, res, next){
-        tutor.findOne({tcourse: 'COSC600'},'tfname tlname temail', function(err, Tutor) {
+        tutor.find({tcourse: 'COSC600'},'tfname tlname temail', function(err, Tutor) {
             if (err) return res.status(500).send(err)
           return res.status(200).send(Tutor);
         }). exec();
         });
     
         router.post('/237', urlencodedParser, j, function(req, res, next){
-            tutor.findOne({tcourse: 'COSC237'},'tfname tlname temail', function(err, Tutor) {
+            tutor.find({tcourse: 'COSC237'},'tfname tlname temail', function(err, Tutor) {
                 if (err) return res.status(500).send(err)
               return res.status(200).send(Tutor);
             }). exec();
@@ -32,17 +32,3 @@ router.post('/236', urlencodedParser, j, function(req, res, next){
 module.exports = router;
 
 
-//$.ajax({
-//     type: "GET",
-//     url: Url,
-//     // data: {
-//     // 	tcourse: data
-//     // },
-//     // dataType: JSON,
-//     success: function(data){
-//         $('.output tbody').html(data).show();
-//     },
-//     error: function(error){
-//         console.log('error ${error}')
-// }
-//        });
