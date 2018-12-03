@@ -13,7 +13,8 @@ var tutor = require('../tutors');
 router.get('/', urlencodedParser, j, function(req, res, next){
     tutor.findOne({tcourse: 'COSC236'},'tfname tlname temail', function(err, Tutor) {
         if (err) return res.status(500).send(err)
-    return res.status(200).send({Tutor});
+        JSON.stringify(req.body);
+    return res.status(200).send(req.body);
     });
     });
 module.exports = router;
