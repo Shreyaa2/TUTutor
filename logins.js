@@ -52,7 +52,7 @@ $('.login').submit(() => {
 });
 }
 
-function verifyUsert() {
+function verifyUsera() {
 	$(document).ready(function (){
 	var usr = $(".adminLoginEmail").val();
 	var pass = $(".adminLoginPassword").val();
