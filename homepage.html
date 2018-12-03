@@ -10,29 +10,41 @@
         <title>TUTutor - Home Page!</title>
             <meta charset="utf-8">  
     </head>
+<Style>
+
+</Style>
 
     <body>
    <!-- <h1>Welcome back, Tiger!</h1> -->
         
         <div id="welcome">
-           <img src="./Images/banner.png" alt="Welcome to TUTutor">
+           <img src="./Images/banner.png" alt="Welcome to TUTutor" >
             <div id="greeting"> </div>
         <div class="topnav">
-            <a class="active" href="homepage.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contactus.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-        </div>
+            <table>
+                <thead>
+                        <td colspan="5"><a class="active" href="homepage.html">Home</a> </td> 
+                </thead>
+            <thead>
+          <td></td>
+          <td><a href="about.html">About</a> </td> 
+          <td><a href="contactus.html">Contact</a></td>
+          <td><a href="faq.html">   FAQ    </a> </td>
+          <td></td>
+          <td></td>
+        </thead>
+        </table>
+        </div> 
              <div class="searchbar">
                  <button onclick="searchListing()" class="searchbtn">Search</button>
                  <div id="searchDropList" class="dropdown-content">
                      <input type="text" placeholder="Search.." id="searchInput" onkeyup="filterResults()">
-                     <a href="about.html">About</a>
+            <!--         <a href="about.html">About</a>
                      <a href="contactus.html">Contact</a>
-                     <a href="faq.html">FAQ</a>
+                     <a href="faq.html">FAQ</a> -->
                      <a href="cosc236board.html">COSC236</a>
                      <a href="cosc237board.html">COSC237</a>
-                     <a href="cosc600board.html">COSC600</a>
+                     <a href="cosc600board.html">COSC600</a> 
                     </div>
                 </div>
         </div>
