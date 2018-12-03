@@ -104,6 +104,11 @@
 }
 
 /*Login Styles*/
+
+fieldset{
+    border:0;
+}
+
 #loginpage{
     text-align:center;
 }
