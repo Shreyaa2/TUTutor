@@ -58,7 +58,6 @@ app.get("/", function(req, res){
  app.use('/tutorpro', tutorroutes);
  app.use('/signins', login);
  app.use('/signint', tlogin);
- app.use('/cosc236board.html', home);
 
 
 //  app.use(function (req, res, next) {
