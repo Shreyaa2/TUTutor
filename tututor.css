@@ -167,7 +167,7 @@ fieldset{
   }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #ccc;
   color: black;
 }
 
@@ -200,7 +200,7 @@ fieldset{
     font-size: 16px;
     padding: 14px 20px 12px 45px;
     border: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
 }
 
 #searchInput:focus {outline: 3px solid #ddd;}
@@ -220,7 +220,7 @@ fieldset{
     background-color: #f6f6f6;
     min-width: 230px;
     overflow: auto;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     z-index: 1;
 }
 
