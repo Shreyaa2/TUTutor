@@ -18,13 +18,13 @@
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
 	<div id="o">
-<form  onsubmit="return display()" action="/236board" method="GET">
-<table id="output">
+<form id="output" onsubmit="return display()" action="/236board" method="GET">
+<table >
 <tbody>
 
 </tbody>
 </table>
-<button type="submit" id='button'  >CLICK FOR TUTOR INFO</button>
+<button type="submit" id='button' >CLICK FOR TUTOR INFO</button>
 </form>
 		
 	</div>
@@ -53,7 +53,7 @@ $(document).ready(function(){
 			tcourse: data
 		},
 		success: function(data){
-			$('#output tbody').html(data);
+			$('.output tbody').html(data);
 		},
 		error: function(error){
 			console.log('error ${error}')
