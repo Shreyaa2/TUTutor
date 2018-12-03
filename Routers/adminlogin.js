@@ -8,7 +8,7 @@ app.use(bodyparse.json());
 var $ = require('jquery');
 
 
-var admin = require('./admin');
+var admin = require('../admin');
 
 router.get('/' ,urlencodedParser, j, (req, res, next) => {
     admin.find({username: req.body.adminLoginEmail}) 
