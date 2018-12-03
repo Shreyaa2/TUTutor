@@ -18,15 +18,15 @@
 	<p>Tutor and Pupil posts to be added</p>
 	<!--<div id="tutors" onload="display()">-->
 	<div id="o">
-<form id="output" action="/tutorpro" method="POST">
-<input > 
+<form id="output" onsubmit="return display()" action="/tutorpro" method="POST">
 <table>
 <tbody>
 
 </tbody>
 </table>
+<button type="submit" id='button'  >CLICK FOR TUTOR INFO</button>
 </form>
-		<button id='button' onclick="return display()" >CLICK FOR TUTOR INFO</button>
+		
 	</div>
 <!--<script>
 //$(document).ready(function(){
@@ -45,10 +45,10 @@ function display () {
 $(document).ready(function(){
 	const Url='/tutorpro';
 	var data = 'COSC236'
- 	$("button").click(function(){	
+ 	$("button").submit(function(){	
 	$.ajax({
-		url: Url,
 		type: "POST",
+		url: Url,
 		data: {
 			tcourse: data
 		},
