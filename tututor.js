@@ -1,3 +1,25 @@
+var tweetIndex = 0;
+showTweets();
+
+function showTweets() {
+    var i;
+    var tweets = document.getElementsByClassName("tuTweets");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < tweets.length; i++) {
+       tweets[i].style.display = "none";  
+    }
+    tweetIndex++;
+    if (tweetIndex > tweets.length) {tweetIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    tweets[tweetIndex-1].style.display = "block";  
+    dots[tweetIndex-1].className += " active";
+    setTimeout(showTweets, 3000); 
+}
+
+
+
 
 function checkPasswordTutor(){
 	var pw_t = document.forms["tutorform"]["tutorpassword"].value
