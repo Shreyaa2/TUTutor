@@ -62,20 +62,20 @@ app.get("/", function(req, res){
  app.use('/signina', alogin);
  app.use('/board', board1);
 
-//  app.use(function (req, res, next) {
-//     const error = new Error('Not Found');
-//     error.status = 404;
-//     next(error);
-//     });
+ app.use(function (req, res, next) {
+    const error = new Error('Not Found');
+    error.status = 404;
+    next(error);
+    });
 
-//  app.use((error, req, res, next) => {
-//     res.status(error.status || 500);
-//     res.json({
-//         error: {
-//             message: error.message
-//         }
-//     });
-//  });
+ app.use((error, req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        }
+    });
+ });
 
  
 
