@@ -111,17 +111,20 @@
 #tutorloginpage{
     text-align:center;
     border: 5px solid #FFF821;
+    max-width: 500px;
 
 }
 
 #pupilloginpage{
     text-align:center;
     border: 5px solid #FFF821;
+    max-width: 500px;
 }
 
 #adminloginpage{
     text-align:center;
     border: 5px solid #FFF821;
+    max-width: 500px;
 }
 
 /*Homepage Styles*/
