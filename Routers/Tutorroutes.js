@@ -34,19 +34,19 @@ router.post('/', urlencodedParser,j,function (req, res, next) {
     });
 });
 
-router.get('/:tutor_id', urlencodedParser,j,function(req, res, next){
-    var id = req.params.productId;
-    tutor.findById(id)
-    .exec()
-    .then (doc =>{
-        console.log(doc);
-        res.status(200).json(doc);
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({error: err});
-    });
-});
+// router.get('/:tutor_id', urlencodedParser,j,function(req, res, next){
+//     var id = req.params.productId;
+//     tutor.findById(id)
+//     .exec()
+//     .then (doc =>{
+//         console.log(doc);
+//         res.status(200).json(doc);
+//     })
+//     .catch(err => {
+//         console.log(err);
+//         res.status(500).json({error: err});
+//     });
+// });
 
 router.get('/', urlencodedParser, j, function(req, res, next){
     tutor.findOne({tcourse: 'COSC236'}, 'tfname tlname temail', function(err, Tutor) {
