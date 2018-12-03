@@ -32,18 +32,7 @@ text-align:center;
   margin: auto;
   border: 5px solid #000000;
 }
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+
 </style>
 	
 </head>
@@ -75,13 +64,6 @@ text-align:center;
 		</div>
 
 	</div>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
 		
 	<div id="aboutus_part2">
 		<p class="part1text">Something needed to change...<span style="color:red;">so that is what we did!</span></p>
@@ -100,17 +82,12 @@ showTweets();
 function showTweets() {
     var i;
     var tweets = document.getElementsByClassName("tuTweets");
-    var dots = document.getElementsByClassName("dot");
     for (i = 0; i < tweets.length; i++) {
        tweets[i].style.display = "none";  
     }
     tweetIndex++;
     if (tweetIndex > tweets.length) {tweetIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
     tweets[tweetIndex-1].style.display = "block";  
-    dots[tweetIndex-1].className += " active";
     setTimeout(showTweets, 3000); 
 }
 	</script>
