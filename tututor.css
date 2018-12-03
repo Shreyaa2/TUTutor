@@ -249,6 +249,10 @@ fieldset{
     transition: 0.4s;
 }
 
+.faqlist li{
+	font-weight:bold;
+}
+
 .active, .faqlist:hover {
     background-color: #ccc; 
 }
