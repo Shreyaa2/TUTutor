@@ -252,6 +252,11 @@ fieldset{
 .panel li{
 	font-weight:bold;
 	text-align:center;
+	font-size:18px;
+}
+
+.panel ol{
+	text-align:center;
 }
 
 .active, .faqlist:hover {
